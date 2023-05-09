@@ -6,3 +6,12 @@
 
 参考：https://zhuanlan.zhihu.com/p/383582472
 
+NUEDC project: Driving Fatigue Real-time Detection and Pre-warning System (Published)
+
+修改完后：
+
+git add -a
+
+git commit -m "修改home"
+
+git push origin main

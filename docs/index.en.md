@@ -12,7 +12,7 @@ Recommended graduate student, PhD in progress.
 
 ## Project Experience
 
-【NUEDC Project】[ Driving Fatigue Real-time Detection and Pre-warning System (Published)](Project/全国大学生电子设计竞赛项目：疲劳驾驶检测项目184be3c8a0024b18b39cf2f516f3471f.en.md)
+【NUEDC Project】[ Driving Fatigue Real-time Detection and Pre-warning System (Published)](Project/NUEDC_project_Driving_Fatigue_Real-time_Detection_and_Pre-warning_System_(Published).en.md)
 
 
 >More Project Experience is to be added.
