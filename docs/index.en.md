@@ -1,17 +1,21 @@
-# Welcome to MkDocs
+# 【Home】 Han Yan's CV
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+## Education
 
-## Commands
+Sep 2018 - Jun 2022
+North Univ. Of China Mechanical Electronic Engineering（Bachelor）
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+Sep 2022 - Present
+North Univ. Of China Mechanical Electronic Engineering（Doctorate）
 
-## Project layout
+Recommended graduate student, PhD in progress.
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage. 
-        ...       # Other markdown pages, images and other files.
+## Project Experience
+
+【NUEDC Project】[ Driving Fatigue Real-time Detection and Pre-warning System (Published)](Project/全国大学生电子设计竞赛项目：疲劳驾驶检测项目184be3c8a0024b18b39cf2f516f3471f.en.md)
+
+
+>More Project Experience is to be added.
+
+
+
