@@ -1,0 +1,65 @@
+site_name: 'HanCV'
+
+# Configuration
+theme:
+  name: 'material'
+  language: 'en'
+  palette:
+    primary: 'brown'
+    accent: 'deep orange'
+  font:
+    text: 'Roboto'
+    code: 'Roboto Mono'
+  # logo: 
+  #   icon: '&#10999'
+  
+  feature:
+    tabs: true
+
+
+# Customization
+# extra:
+#   manifest: 'manifest.webmanifest'
+#   search:
+#       language: 'en'
+#       tokenizer: '[\s\-\.]+'
+#   social:
+#     - type: 'wechat'
+#       link: ''
+#     - type: 'qq'
+#       link: 'http://qm.qq.com/cgi-bin/qm/qr?k=pYKpMWuJIN4NLekGt6Rv95CwaAlITULZ'
+#     - type: 'github'
+#       link: 'https://Ray005.github.io'
+  # logo: 'assets/images/favicon.png'
+  # favicon: 'assets/images/favicon.png'
+
+# Extensions
+markdown_extensions:
+  - admonition
+  - footnotes
+  - codehilite:
+      guess_lang: true
+      linenums: true
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex
+  
+extra_javascript:
+  - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'
+  - 'javascripts/MathJax.js'
+#  - 'javascripts/extra.js'
+ 
+plugins:
+  - search
+  - i18n:
+      material_alternate: True
+      default_language: en
+      languages:
+        en:
+          name: English
+          build: true
+        zh:
+          name: 简体中文
+          build: true
+#  - git-revision-date-localized
+
