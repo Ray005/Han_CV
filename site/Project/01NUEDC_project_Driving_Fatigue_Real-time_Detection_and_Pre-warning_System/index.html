@@ -1,0 +1,1547 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../..">
+      
+      
+        <link rel="next" href="../02Graduation%20Thesis/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.11">
+    
+    
+      
+        <title>NUEDC project: Driving Fatigue Real-time Detection and Pre-warning System (Published) - HanCV</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.85bb2934.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.a6bdf11c.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="brown" data-md-color-accent="deep-orange">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#nuedc-project-driving-fatigue-real-time-detection-and-pre-warning-system-published" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="HanCV" class="md-header__button md-logo" aria-label="HanCV" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HanCV
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              NUEDC project: Driving Fatigue Real-time Detection and Pre-warning System (Published)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+      <div class="md-header__option">
+        <div class="md-select">
+          
+          <button class="md-header__button md-icon" aria-label="Select language">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7 1.62-4.33L19.12 17h-3.24Z"/></svg>
+          </button>
+          <div class="md-select__inner">
+            <ul class="md-select__list">
+              
+                <li class="md-select__item">
+                  <a href="./" hreflang="en" class="md-select__link">
+                    English
+                  </a>
+                </li>
+              
+                <li class="md-select__item">
+                  <a href="../../zh/Project/01NUEDC_project_Driving_Fatigue_Real-time_Detection_and_Pre-warning_System/" hreflang="zh" class="md-select__link">
+                    简体中文
+                  </a>
+                </li>
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="HanCV" class="md-nav__button md-logo" aria-label="HanCV" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    HanCV
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        【Home】 Han Yan's CV
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          Project
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Project
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          NUEDC project: Driving Fatigue Real-time Detection and Pre-warning System (Published)
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        NUEDC project: Driving Fatigue Real-time Detection and Pre-warning System (Published)
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#11-background-analysis" class="md-nav__link">
+    1.1 Background Analysis
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-related-work" class="md-nav__link">
+    1.2 Related work
+  </a>
+  
+    <nav class="md-nav" aria-label="1.2 Related work">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-fatigue-determination" class="md-nav__link">
+    1) Fatigue determination
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-cloud-system-solution" class="md-nav__link">
+    2) Cloud system solution
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-hardware-devices-communicate-with-each-subsystem" class="md-nav__link">
+    3) Hardware devices communicate with each subsystem
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-description-of-features" class="md-nav__link">
+    1.3 Description of features
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-application-prospect-analysis" class="md-nav__link">
+    1.4 Application prospect analysis
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#21-system-scheme" class="md-nav__link">
+    2.1 System scheme
+  </a>
+  
+    <nav class="md-nav" aria-label="2.1 System scheme">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#211-background" class="md-nav__link">
+    2.1.1 Background
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#212-solution-design" class="md-nav__link">
+    2.1.2 Solution design
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#22-implementation-principle" class="md-nav__link">
+    2.2 Implementation principle
+  </a>
+  
+    <nav class="md-nav" aria-label="2.2 Implementation principle">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#221-detection-method-based-on-drivers-physiological-signal" class="md-nav__link">
+    2.2.1 Detection method based on driver's physiological signal
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#222-detection-method-based-on-the-physiological-response-characteristics-of-the-driver" class="md-nav__link">
+    2.2.2 Detection method based on the physiological response characteristics of the driver
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#223-cloud-platform-based-on-ali-cloud-server" class="md-nav__link">
+    2.2.3 Cloud platform based on Ali cloud server
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#23-design-calculation" class="md-nav__link">
+    2.3 Design calculation
+  </a>
+  
+    <nav class="md-nav" aria-label="2.3 Design calculation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#231-median-filtering-to-remove-eeg-artifacts" class="md-nav__link">
+    2.3.1 Median filtering to remove EEG artifacts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#231-fatigue-threshold-calculation" class="md-nav__link">
+    2.3.1 Fatigue threshold calculation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#24-software-design" class="md-nav__link">
+    2.4 Software design
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#25-work-function" class="md-nav__link">
+    2.5 Work function
+  </a>
+  
+    <nav class="md-nav" aria-label="2.5 Work function">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#251-appearance" class="md-nav__link">
+    2.5.1 Appearance
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#252-web-application" class="md-nav__link">
+    2.5.2 Web Application
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#31-test-protocol" class="md-nav__link">
+    3.1 Test protocol
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1 Test protocol">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#311-classification-of-methods-for-fatigue-assessment" class="md-nav__link">
+    3.1.1 Classification of methods for fatigue assessment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#312-fatigue-subjective-response" class="md-nav__link">
+    3.1.2 Fatigue subjective response
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#312-objective-fatigue-detection" class="md-nav__link">
+    3.1.2 Objective fatigue detection
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#32-test-environment-construction" class="md-nav__link">
+    3.2 Test environment construction
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2 Test environment construction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#321-installation-of-the-tested-equipment" class="md-nav__link">
+    3.2.1 Installation of the tested equipment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#322-validation-environment-construction" class="md-nav__link">
+    3.2.2 Validation environment construction
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#33-test-equipment-and-data" class="md-nav__link">
+    3.3 Test Equipment and Data
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3 Test Equipment and Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#331-test-equipment" class="md-nav__link">
+    3.3.1 Test equipment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#331-data-recording" class="md-nav__link">
+    3.3.1 Data recording
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#34-analysis-of-results" class="md-nav__link">
+    3.4 Analysis of results
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#41-main-innovation-points" class="md-nav__link">
+    4.1 Main innovation points
+  </a>
+  
+    <nav class="md-nav" aria-label="4.1 Main innovation points">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#411-no-interference-with-the-drivers-test-method" class="md-nav__link">
+    4.1.1. No interference with the driver's test method
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#412-adopt-the-identification-method-with-high-accuracy-high-robustness-and-high-reliability-it-is-not-affected-by-the-usage-conditions-such-as-wearing-glasses-and-sunglasses-during-the-detection-process" class="md-nav__link">
+    4.1.2. Adopt the identification method with high accuracy, high robustness and high reliability: it is not affected by the usage conditions such as wearing glasses and sunglasses during the detection process.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#413-adopt-multiple-means-to-alert-drivers-to-avoid-poor-alerting-effect-by-a-single-alerting-method" class="md-nav__link">
+    4.1.3. Adopt multiple means to alert drivers to avoid poor alerting effect by a single alerting method.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#414-realize-intelligent-interconnection-visual-acquisition-based-on-renesas-rza2m-embedded-platform-eeg-indicator-acquisition-based-on-mindlink-two-interactive-communication-combined-with-physiological-indicators-and-visual-indicators-to-determine-the-degree-of-fatigue-to-avoid-abnormal-misjudgment-so-that-the-system-has-good-robustness" class="md-nav__link">
+    4.1.4. Realize intelligent interconnection: visual acquisition based on Renesas RZ/A2M embedded platform, EEG indicator acquisition based on MindLink two interactive communication, combined with physiological indicators and visual indicators to determine the degree of fatigue, to avoid abnormal misjudgment, so that the system has good robustness.
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#51-deficiencies-and-improvements" class="md-nav__link">
+    5.1 Deficiencies and improvements
+  </a>
+  
+    <nav class="md-nav" aria-label="5.1 Deficiencies and improvements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#511-insufficient-iris-detection-recognition-rate" class="md-nav__link">
+    5.1.1 Insufficient iris detection recognition rate
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#512-insufficient-amount-of-data-in-the-experiment" class="md-nav__link">
+    5.1.2 Insufficient amount of data in the experiment
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#51-competition-summary" class="md-nav__link">
+    5.1 Competition Summary
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#appendix-i-mqtt-way-to-connect-to-ali-cloud-platform" class="md-nav__link">
+    Appendix I MQTT way to connect to Ali cloud platform
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#appendix-ii-eeg-signal-median-filtering-code" class="md-nav__link">
+    Appendix II EEG signal median filtering code
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    References:
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02Graduation%20Thesis/" class="md-nav__link">
+        Graduation Thesis: ROS-based UAV Leveling System (excerpt)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03PLC%20Temp%20Monitor%20Coded%20with%20Python%20TK/" class="md-nav__link">
+        PLC Temp Monitor Coded with Python TK as Uplink
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#11-background-analysis" class="md-nav__link">
+    1.1 Background Analysis
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-related-work" class="md-nav__link">
+    1.2 Related work
+  </a>
+  
+    <nav class="md-nav" aria-label="1.2 Related work">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-fatigue-determination" class="md-nav__link">
+    1) Fatigue determination
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-cloud-system-solution" class="md-nav__link">
+    2) Cloud system solution
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-hardware-devices-communicate-with-each-subsystem" class="md-nav__link">
+    3) Hardware devices communicate with each subsystem
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-description-of-features" class="md-nav__link">
+    1.3 Description of features
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-application-prospect-analysis" class="md-nav__link">
+    1.4 Application prospect analysis
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#21-system-scheme" class="md-nav__link">
+    2.1 System scheme
+  </a>
+  
+    <nav class="md-nav" aria-label="2.1 System scheme">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#211-background" class="md-nav__link">
+    2.1.1 Background
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#212-solution-design" class="md-nav__link">
+    2.1.2 Solution design
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#22-implementation-principle" class="md-nav__link">
+    2.2 Implementation principle
+  </a>
+  
+    <nav class="md-nav" aria-label="2.2 Implementation principle">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#221-detection-method-based-on-drivers-physiological-signal" class="md-nav__link">
+    2.2.1 Detection method based on driver's physiological signal
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#222-detection-method-based-on-the-physiological-response-characteristics-of-the-driver" class="md-nav__link">
+    2.2.2 Detection method based on the physiological response characteristics of the driver
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#223-cloud-platform-based-on-ali-cloud-server" class="md-nav__link">
+    2.2.3 Cloud platform based on Ali cloud server
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#23-design-calculation" class="md-nav__link">
+    2.3 Design calculation
+  </a>
+  
+    <nav class="md-nav" aria-label="2.3 Design calculation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#231-median-filtering-to-remove-eeg-artifacts" class="md-nav__link">
+    2.3.1 Median filtering to remove EEG artifacts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#231-fatigue-threshold-calculation" class="md-nav__link">
+    2.3.1 Fatigue threshold calculation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#24-software-design" class="md-nav__link">
+    2.4 Software design
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#25-work-function" class="md-nav__link">
+    2.5 Work function
+  </a>
+  
+    <nav class="md-nav" aria-label="2.5 Work function">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#251-appearance" class="md-nav__link">
+    2.5.1 Appearance
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#252-web-application" class="md-nav__link">
+    2.5.2 Web Application
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#31-test-protocol" class="md-nav__link">
+    3.1 Test protocol
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1 Test protocol">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#311-classification-of-methods-for-fatigue-assessment" class="md-nav__link">
+    3.1.1 Classification of methods for fatigue assessment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#312-fatigue-subjective-response" class="md-nav__link">
+    3.1.2 Fatigue subjective response
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#312-objective-fatigue-detection" class="md-nav__link">
+    3.1.2 Objective fatigue detection
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#32-test-environment-construction" class="md-nav__link">
+    3.2 Test environment construction
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2 Test environment construction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#321-installation-of-the-tested-equipment" class="md-nav__link">
+    3.2.1 Installation of the tested equipment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#322-validation-environment-construction" class="md-nav__link">
+    3.2.2 Validation environment construction
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#33-test-equipment-and-data" class="md-nav__link">
+    3.3 Test Equipment and Data
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3 Test Equipment and Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#331-test-equipment" class="md-nav__link">
+    3.3.1 Test equipment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#331-data-recording" class="md-nav__link">
+    3.3.1 Data recording
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#34-analysis-of-results" class="md-nav__link">
+    3.4 Analysis of results
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#41-main-innovation-points" class="md-nav__link">
+    4.1 Main innovation points
+  </a>
+  
+    <nav class="md-nav" aria-label="4.1 Main innovation points">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#411-no-interference-with-the-drivers-test-method" class="md-nav__link">
+    4.1.1. No interference with the driver's test method
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#412-adopt-the-identification-method-with-high-accuracy-high-robustness-and-high-reliability-it-is-not-affected-by-the-usage-conditions-such-as-wearing-glasses-and-sunglasses-during-the-detection-process" class="md-nav__link">
+    4.1.2. Adopt the identification method with high accuracy, high robustness and high reliability: it is not affected by the usage conditions such as wearing glasses and sunglasses during the detection process.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#413-adopt-multiple-means-to-alert-drivers-to-avoid-poor-alerting-effect-by-a-single-alerting-method" class="md-nav__link">
+    4.1.3. Adopt multiple means to alert drivers to avoid poor alerting effect by a single alerting method.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#414-realize-intelligent-interconnection-visual-acquisition-based-on-renesas-rza2m-embedded-platform-eeg-indicator-acquisition-based-on-mindlink-two-interactive-communication-combined-with-physiological-indicators-and-visual-indicators-to-determine-the-degree-of-fatigue-to-avoid-abnormal-misjudgment-so-that-the-system-has-good-robustness" class="md-nav__link">
+    4.1.4. Realize intelligent interconnection: visual acquisition based on Renesas RZ/A2M embedded platform, EEG indicator acquisition based on MindLink two interactive communication, combined with physiological indicators and visual indicators to determine the degree of fatigue, to avoid abnormal misjudgment, so that the system has good robustness.
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#51-deficiencies-and-improvements" class="md-nav__link">
+    5.1 Deficiencies and improvements
+  </a>
+  
+    <nav class="md-nav" aria-label="5.1 Deficiencies and improvements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#511-insufficient-iris-detection-recognition-rate" class="md-nav__link">
+    5.1.1 Insufficient iris detection recognition rate
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#512-insufficient-amount-of-data-in-the-experiment" class="md-nav__link">
+    5.1.2 Insufficient amount of data in the experiment
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#51-competition-summary" class="md-nav__link">
+    5.1 Competition Summary
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#appendix-i-mqtt-way-to-connect-to-ali-cloud-platform" class="md-nav__link">
+    Appendix I MQTT way to connect to Ali cloud platform
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#appendix-ii-eeg-signal-median-filtering-code" class="md-nav__link">
+    Appendix II EEG signal median filtering code
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    References:
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="nuedc-project-driving-fatigue-real-time-detection-and-pre-warning-system-published">NUEDC project: Driving Fatigue Real-time Detection and Pre-warning System (Published)<a class="headerlink" href="#nuedc-project-driving-fatigue-real-time-detection-and-pre-warning-system-published" title="Permanent link">&para;</a></h1>
+<p>Published in: 2020 NUEDC Information Technology Frontier Invitational Competition: (Renesas Cup) Selected Winning Works</p>
+<p><img alt="1683641183980.png" src="../img/1683641183980.png" /></p>
+<p>2020 National College Student Electronic Design Contest Information Technology Frontier Topic Invitational Tournament (Risa Cup) works design report</p>
+<p>Driving Fatigue Real-time Detection and Pre-warning System</p>
+<p>Abstract: The Chinese National Road Traffic Safety Report issued by the Traffic Management Bureau of the Ministry of Public Security of the People’s Republic of my country pointed out that in the major traffic accidents, the driver’s fatigue driving is the most prominent. Driving fatigue will significantly increase the driver’s reaction time, decrease in operating ability and increase in judgment errors. Therefore, it is of practical significance to establish a suitable driving fatigue evaluation system and device.</p>
+<p>This work is a fatigue warning system and is based on the Renesas RZ/A2M embedded platform. The visual sensor and the brain wave sensor collect the driver’s facial image and brain wave data respectively, and send the data back to the embedded platform. Through simple processing and calculation, three indicators that characterize driver fatigue are obtained: “Brain Activity”, “Attention”, and “Visual Fatigue Index”. In advance, fatigue threshold corresponding to each indicator are calculated out of the labeled experimental data through classification and regression tree (CART) data mining method, so that the embedded system can quickly and accurately judge whether the driver’s in fatigue.</p>
+<p>With the help of the built-in edge computing unit DRP in the RZ/A2M embedded chip, we optimize the processing of the driver’s facial image by accelerating the calculation of fatigue indicators with DRP. In addition, the system accesses the Alibaba Cloud IoT platform by the ESP32 module through WIFI. In real time, the system uploads the detection results and warning information to the cloud, and monitors the operating status. This mechanism facilitate the networking, data collecting, and firmware upgrading of a large amount of devices.The system can accurately judge driving fatigue and issue warnings in time, and has a cloud recording function. In addition to driving fatigue monitoring applied to motor vehicle drivers, application scenarios also include scenarios that require instant response, such as high-speed rail and ship unloaders.</p>
+<p>Keywords:Renesas RZ/A2M; Vision Sensor; Brainwave Sensor; Edge Computing; Dynamically Reconfigurable Processor (DRP); Classification And Regression Tree Data Mining; Alibaba Cloud IoT Platform; Instant Response;</p>
+<h2 id="11-background-analysis">1.1 Background Analysis<a class="headerlink" href="#11-background-analysis" title="Permanent link">&para;</a></h2>
+<p>The Virginia Tech Transportation Institute has published a set of survey data on driver habits, distractions, and crash causes. The data show that nearly 80% of collisions and 65% of impending collisions are caused by driver negligence in the 3s before the incident. Therefore, implementing real-time fatigue detection during driving and generating alerts quickly and effectively is an important tool to avoid accidents.</p>
+<h2 id="12-related-work">1.2 Related work<a class="headerlink" href="#12-related-work" title="Permanent link">&para;</a></h2>
+<p>The system is based on Renesas RZ/A2M embedded platform, and the fatigue detection function is realized by the scheme of combining EEG physiological indicators with iris detection technology.</p>
+<h3 id="1-fatigue-determination">1) Fatigue determination<a class="headerlink" href="#1-fatigue-determination" title="Permanent link">&para;</a></h3>
+<p>(1) EEG indicator analysis. Two indicators are used to determine fatigue in this work, which are "brain activity" and "concentration". The "brain activity" (EEGCV) is essentially the ratio of the variance to the mean of the EEG signal in each assessment period, i.e., the EEG coefficient of variation. Concentration" is an indicator derived from the built-in algorithm in the EEG chip TGAM, which has some reference value.</p>
+<p>(2) Iris detection technology. In this work, the driver's iris position and state are detected to infer the driver's fatigue state by detecting the eye-movement characteristics, and the image processing process is accelerated by the dynamic configurable processor DRP.</p>
+<p>(3) Fatigue threshold determination and application scheme. To determine the threshold, data mining was used to find the best cut-off point in 1541 collected data sets using Classification and Regression Tree (CART) data mining method. The results of the dichotomous classification were: normal vs. fatigue.</p>
+<h3 id="2-cloud-system-solution">2) Cloud system solution<a class="headerlink" href="#2-cloud-system-solution" title="Permanent link">&para;</a></h3>
+<p>Ali cloud IOT platform access: embedded platform through the ESP32 module WIFI function to access the Internet, and then able to access the Ali cloud IOT platform, in this platform for data display, record. On the basis of this IOT data access, we used the IoTStudio tool provided by AliCloud IOT platform to create a web application as the data display window of this work, which can be accessed directly through a browser, thus monitoring the real-time data status and real-time curve.</p>
+<h3 id="3-hardware-devices-communicate-with-each-subsystem">3) Hardware devices communicate with each subsystem<a class="headerlink" href="#3-hardware-devices-communicate-with-each-subsystem" title="Permanent link">&para;</a></h3>
+<p>The vision sensor uses the IMX219PQH5-C camera from the development kit, which is connected to the Renesas RZ/A2M embedded platform via the MIPI interface. The EEG sensor uses the MindLink EEG sensor based on the TGAM chip, which is connected to the serial port 1 of the ESP32 using Bluetooth to serial communication. The EEG data is parsed and passed to the SCIFA4 serial port of the RZ/A2M via the serial port 2 of the ESP32.</p>
+<h2 id="13-description-of-features">1.3 Description of features<a class="headerlink" href="#13-description-of-features" title="Permanent link">&para;</a></h2>
+<p>(1) Immediacy. The detection period is 1s, i.e. a data set consisting of three indicators is output every second in the system.</p>
+<p>(2) Indicator integration. The system uses multiple indicators and integrates physiological and visual indicators to assess the degree of fatigue, effectively avoiding misjudgment caused by single indicator abnormalities and making the system more robust.</p>
+<p>(3) Long-term monitoring capability. Local data is isolated and inflexible, which is not convenient for analysis of big data. In this work, the data is regularly packaged and uploaded to Aliyun IOT platform. With a certain amount of data, further mining and analysis is carried out to get a longer period of time span view of the driver's fatigue at work.</p>
+<h2 id="14-application-prospect-analysis">1.4 Application prospect analysis<a class="headerlink" href="#14-application-prospect-analysis" title="Permanent link">&para;</a></h2>
+<p>Application areas can be in places where the immediate response of drivers is high, such as charter buses engaged in tourism and road-specific vehicles transporting dangerous chemicals. In addition to the application of driving fatigue monitoring for motor vehicle drivers, the application scenarios of this work include, for example, scenarios requiring immediate driver response such as high-speed rail and ship unloading machines.</p>
+<h2 id="21-system-scheme">2.1 System scheme<a class="headerlink" href="#21-system-scheme" title="Permanent link">&para;</a></h2>
+<h3 id="211-background">2.1.1 Background<a class="headerlink" href="#211-background" title="Permanent link">&para;</a></h3>
+<p>Fatigue driving refers to the driver's physiological and psychological dysfunctions after a long period of continuous driving, and the phenomenon of objective decline in driving skills. According to the Penalty Standards for Road Traffic Violations, driving a motor vehicle continuously for more than 4h without stopping to rest or stopping to rest for less than 20min constitutes fatigue driving. This work aims to design a device to determine driver fatigue based on Renesas platform and EEG signal and visual sensor analysis, in order to achieve the purpose of real-time monitoring and timely warning reminders, which can greatly reduce the possibility of traffic accidents.</p>
+<p>The system is based on Renesas platform development, using multi-source information fusion, is a combination of the Internet of Things, embedded application system, where the hardware part of the development board to control a variety of peripherals to complete a series of operations, including embedded development kit, integrated camera ﹑ Bluetooth communication, power supply module, etc.. The software part completes the face iris detection, feature point circling, fatigue determination alarm and other operations. When driver fatigue is detected within a certain period of time, the system will alarm (ringing) to remind the driver to achieve the role of wake-up call. At the same time, the Ali cloud platform can be used to transmit monitoring data in real time to remind and notify the driver. Finally, the development process and results of the detection system are explained. Theoretical experiments are designed to quantify the driver's fatigue state, and the curve is generated through Ali cloud server, which can visualize the driver's mental state. This system can help the construction of smart city and smart transportation, and has wide applicability.</p>
+<h3 id="212-solution-design">2.1.2 Solution design<a class="headerlink" href="#212-solution-design" title="Permanent link">&para;</a></h3>
+<p>The input part of the system is the wearable EEG sensor and the visual sensor fixed in front of the driver, two sensors, which is the basis for the realization of system functions. The processing part in mainly on the RZ/A2M platform. From the EEG data, two indicators are obtained: "EEG activity" and "concentration", and from the visual data, the indicator "visual fatigue" is extracted based on the duration of eye closure. Finally, according to the threshold value obtained in the experiment, the fatigue is judged when and only when all three indicators exceed the threshold value.</p>
+<p>The last part of the IOT is to connect with the IOT cloud platform and record data and make alarms. This is connected to the Internet and Ali cloud IOT platform with the WIFI function of ESP32F module. The block diagram of the system is shown in Figure 1 below.</p>
+<p><img alt="1683640228295.png" src="../img/1683640228295.png" /></p>
+<p>Figure 1 Block diagram of the work system</p>
+<h2 id="22-implementation-principle">2.2 Implementation principle<a class="headerlink" href="#22-implementation-principle" title="Permanent link">&para;</a></h2>
+<h3 id="221-detection-method-based-on-drivers-physiological-signal">2.2.1 Detection method based on driver's physiological signal<a class="headerlink" href="#221-detection-method-based-on-drivers-physiological-signal" title="Permanent link">&para;</a></h3>
+<p>Research on fatigue first began in physiology. Related research shows that the physiological indicators of people in the state of fatigue will deviate from the normal state. Therefore, the driver's physiological indicators can be used to determine whether the driver is in a state of fatigue.</p>
+<p>Researchers have long found that EEG can directly reflect the activity of the brain. When entering a fatigued state, there is a large increase in delta and theta wave activity in the EEG, and a small increase in alpha wave activity. Another study conducted experiments by monitoring EEG signals in a simulator and in a real car, and the results showed that EEG is an effective method for monitoring driver fatigue. ECG has been used primarily in physiological measures of driving burden. Studies have shown that ECG decreases significantly and regularly when drivers are fatigued, and that there is a potential relationship between HRV (heart rate variability) and changes in the level of fatigue while driving. The detection method based on the driver's physiological signal has a high accuracy for fatigue determination, but the physiological signal needs to be measured by contact and is more dependent on the individual, which has many limitations when actually used for driver fatigue monitoring, so it is mainly applied in the experimental stage as a control parameter for experiments [1].</p>
+<h3 id="222-detection-method-based-on-the-physiological-response-characteristics-of-the-driver">2.2.2 Detection method based on the physiological response characteristics of the driver<a class="headerlink" href="#222-detection-method-based-on-the-physiological-response-characteristics-of-the-driver" title="Permanent link">&para;</a></h3>
+<p>The detection method based on the physiological response characteristics of the driver refers to the use of the driver's eye movement characteristics and head movement characteristics to infer the driver's fatigue state. Driver's eye movements and blink information are considered to be important features reflecting fatigue, and blink amplitude, blink frequency and average closure time can be directly used to detect fatigue. There are various algorithms for studying driver fatigue based on ocular motility, and widely used algorithms include PERCLOS, which is the percentage of eyelid closure time over a period of time as a measure of physiological fatigue.</p>
+<p>The detection of the iris can help determine the state of eye closure. Specifically, after the iris is detected in the first image frame, the iris is tracked in subsequent image frames using the center coordinates and radius of the iris. This is also known as Hough transform circle detection with known radius, and the computational effort is significantly reduced as the dimensionality of the parameter space decreases. And since the center coordinates of the iris in the previous image frame are the reference position, and since the eye is moving and usually the position of the iris changes in the next frame, we delineate a range, i.e., the brow-eye region, within which iris detection is performed. As the range is narrowed, the detection speed is improved. To improve the accuracy of iris tracking in subsequent frames, we also specify that iris tracking is considered complete for the current frame only when both irises are detected. Then, the center coordinates of the iris detected in the current frame are used as the reference position for the next frame, and the iris tracking is proceeded to the next frame. This process will continue unless the iris is not detected or is jumped out of the tracking loop [2].</p>
+<p>Iris tracking makes use of the a priori knowledge at the time of iris detection, i.e., it continues to detect the iris circle in the tracking frame using the Hough transform when the iris radius and center coordinates of the previous frame are known. In this way, the computational complexity is greatly reduced and the real-time requirement is satisfied. Eye closure is also a basic human physiological characteristic, and this group of products is judged based on the percentage of time the eyes are closed over a period of time when fatigue status is determined.</p>
+<h3 id="223-cloud-platform-based-on-ali-cloud-server">2.2.3 Cloud platform based on Ali cloud server<a class="headerlink" href="#223-cloud-platform-based-on-ali-cloud-server" title="Permanent link">&para;</a></h3>
+<p>Using Ali open source cloud server platform Ali's artificial intelligence ET has the world's leading artificial intelligence technology, already has intelligent voice interaction, image/video recognition, traffic prediction, sentiment analysis and other skills. Through Renesas platform face iris recognition and EEG activity cross-fusion fusion, unified judgment after uploading to the cloud server, car tachometer like real-time display of brain activity, concentration and blink frequency, eye degree and fit the curve, now most cars are deployed in the car screen only through the Bluetooth connection can be realized after the security monitoring function, effective protection of personal safety. The time threshold can be repeatedly set manually, and when the predetermined time is reached, the PERCLOS algorithm is used to determine the driving status of the person. If the state is fatigue, the alarm device will be activated to wake up the driver. If the number of fatigue detected within the set time period exceeds the pre-set threshold, the detection data will be sent to the designated contact person and passenger through the WeChat cloud platform.</p>
+<h2 id="23-design-calculation">2.3 Design calculation<a class="headerlink" href="#23-design-calculation" title="Permanent link">&para;</a></h2>
+<h3 id="231-median-filtering-to-remove-eeg-artifacts">2.3.1 Median filtering to remove EEG artifacts<a class="headerlink" href="#231-median-filtering-to-remove-eeg-artifacts" title="Permanent link">&para;</a></h3>
+<p>Since the EEG signal is very weak, it is easily disturbed by additional noise such as oculoelectric artifacts and myoelectric artifacts introduced from the acquisition equipment etc. The interference components of each artifact noise contained in the EEG signal seriously affect the authenticity of the acquired EEG signal, which makes it very complicated to study the characteristics of the EEG signal and analyze and process it. In order to extract a relatively clean EEG signal, according to the algorithms related to EEG signal processing, the EEG signal de-artifact processing based on the improved wavelet thresholding [3] shrinkage algorithm is better, but due to the complexity of the algorithm and the requirement for computational speed, the median value filtering method is used here instead. The filtering effect is demonstrated as shown in Figure 2.</p>
+<p><img alt="1683639281279.png" src="../img/1683639281279.png" /></p>
+<p>Fig. 2 Median de-artifactualization effect</p>
+<h3 id="231-fatigue-threshold-calculation">2.3.1 Fatigue threshold calculation<a class="headerlink" href="#231-fatigue-threshold-calculation" title="Permanent link">&para;</a></h3>
+<p>After proposing the indexes for measuring fatigue, that is, after the system has been processed to derive the three parameters of brain activity, concentration and visual fatigue index, the next thing to do is to determine the threshold value of the fatigue index. The use of the threshold judgment method enables the system to make a quick judgment. In order to obtain accurate interval values for fatigue indicators, a reasonable interval calculation method must be chosen first.</p>
+<p>The method of determining the interval value based on the empirical value of the fatigue index at the time the subject reported fatigue is rather coarse, and the interval value of the fatigue index obtained in this way lacks objective theoretical support. The method of determining the interval value of a measure based on the significance of the difference between data segment series is more objective, but in practice, this method is often used to determine how long it takes for a subject to enter a fatigue state to reach a certain state, rather than being used directly to determine the threshold value of a measure.</p>
+<p>In order to obtain an accurate fatigue threshold, this work combines subjective and objective data to initially determine fatigue thresholds by classification with the CART method. The Gini index is an important concept in CART. The Gini index (Gini impurity) indicates the probability that a randomly selected sample in the sample set is misclassified.</p>
+<p>The classification regression tree using SPSS 22.0 software constructs is shown in Figure 3. It can be seen that the software uses EEGCV = 1.255 as the optimal cut point, which shows that the Gini index of EEGCV is smaller than the Gini index of the concentration parameter. At EEGCV greater than 1.255, the percentage of normal state reaches 99.1%, which is a high accuracy rate. For the concentration parameter, the software gives a division value of 26.5. Therefore, according to the CART classification, two initial Min values of the fatigue index are obtained: EEGCV = 1.255 and concentration parameter = 26.5.</p>
+<p><img alt="1683639296471.png" src="../img/1683639296471.png" /></p>
+<p>Figure 3 Classification regression tree with threshold selection</p>
+<h2 id="24-software-design">2.4 Software design<a class="headerlink" href="#24-software-design" title="Permanent link">&para;</a></h2>
+<p>Renesas RZ/A2M embedded platform undertakes most of the computational tasks in the system, including visual information processing, brainwave processing and fatigue judgment.</p>
+<p>The three parameters used in the fatigue judgment have thresholds corresponding to them and are judged continuously, and the fatigue alarm is triggered when and only when all three measured parameters exceed the thresholds, and this structure ensures the robustness of the system judgment. The program flow chart is shown in Figure 4</p>
+<p><img alt="1683640846266.png" src="../img/1683640846266.png" /></p>
+<p>Figure 4 Program flow chart</p>
+<p>(Note: The selection of the threshold value for fatigue is not yet completed before the deadline)</p>
+<h2 id="25-work-function">2.5 Work function<a class="headerlink" href="#25-work-function" title="Permanent link">&para;</a></h2>
+<h3 id="251-appearance">2.5.1 Appearance<a class="headerlink" href="#251-appearance" title="Permanent link">&para;</a></h3>
+<p>The CPU board and the slave board of the RZ/A2M development board are in the middle of the picture. The top left side is the camera, which takes the facial image of a human face. On the bottom right is the ESP32-WIFI module with a Bluetooth module connected to receive EEG data. The speaker is placed on top of the ESP module and is driven by the ESP32 on-board driver module. The appearance of the work is shown in Figure 5 below.</p>
+<p><img alt="1683639322528.png" src="../img/1683639322528.png" /></p>
+<p>Figure 5 Hardware appearance of the work</p>
+<p>This hardware can achieve the acquisition and processing of face information, and through the Bluetooth module and brain wave sensor connection, after processing, can achieve the purpose of fatigue detection and voice alarm.</p>
+<h3 id="252-web-application">2.5.2 Web Application<a class="headerlink" href="#252-web-application" title="Permanent link">&para;</a></h3>
+<p>The team created a corresponding web application through the Aliyun platform IoT Studio to reflect the driver's status in real time into the web application, so that the data can be viewed in real time in the web. In the monitoring interface, we can view the real-time changes of the three indicators and the real-time curve changes, so that we can intuitively see the current status of the driver. Figure 6 below shows (Note: the risk warning section for long-term monitoring is still under development)</p>
+<p><img alt="1683639334728.png" src="../img/1683639334728.png" /></p>
+<p>Figure 6 Real-time monitoring web application interface display</p>
+<p>The content includes the test protocol, as the design of this experiment requires frequent subjective reflections from the tested person, which may cause risks if under real driving conditions. Therefore, the experimenter was asked to perform simple tasks such as text writing and newspaper reading in a quiet and empty room. And under this sedentary condition, EEG and visual data recording and subjective feedback recording were performed for one hour. The sedentary condition ensures both the accuracy and the safety of the experiment. The analysis of the results is based on both the accuracy of recognition and the timeliness of warnings.</p>
+<h2 id="31-test-protocol">3.1 Test protocol<a class="headerlink" href="#31-test-protocol" title="Permanent link">&para;</a></h2>
+<p>Five test subjects in good physiological condition were selected, and all of them had a good sleep time of 8 hours on the day before the experiment. Each experiment was conducted at 9:00-10:00 a.m., 14:00-15:00 p.m. and 22:00-23:00 p.m. During the experiment, the subjects actively reflected their mental status every 3 minutes. The ways of feedback in this experiment include two types, the first one is through questionnaire and the second one is through reaction speed test.</p>
+<h3 id="311-classification-of-methods-for-fatigue-assessment">3.1.1 Classification of methods for fatigue assessment<a class="headerlink" href="#311-classification-of-methods-for-fatigue-assessment" title="Permanent link">&para;</a></h3>
+<p>The subjective response, as the name implies, is a simple and easy method for the test subject to actively respond to his or her own fatigue state. And not to the observer's personal preferences, experience and change, and therefore this method is called objective assessment method. According to the different levels of objective assessment of brain fatigue, according to the literature [4] objective assessment methods can be distinguished as:</p>
+<p>(1) psychological and behavioral indicators: for example, simulated typing, reaction speed assessment, etc.</p>
+<p>(2) Physiological indicators: EEG is used for fatigue detection and is known as the "gold standard" [5].</p>
+<p>(3) Biochemical index assessment method</p>
+<p>In this work, the EEG assessment of physiological indicators was used for real-time detection, and the reaction speed assessment of psychological-behavioral assessment was used in this experiment. The more objective reaction speed assessment was combined with a subjective questionnaire to perform fatigue criteria to verify the accuracy and robustness of the system.</p>
+<h3 id="312-fatigue-subjective-response">3.1.2 Fatigue subjective response<a class="headerlink" href="#312-fatigue-subjective-response" title="Permanent link">&para;</a></h3>
+<p>The subjective reflection of fatigue is the subjective perception of fatigue or not by the subject himself during the experiment. Because the objective quantification of fatigue is more difficult, the subjective feeling of the subject is used as the criterion for whether fatigue is present, and the fatigue obtained in this way is more informative as a reference for model correction.</p>
+<p>Two ways can be used to obtain the subjective response values of subjects, the first by means of regular questioning and the second by means of questionnaires at regular intervals. Taking into account that the subjects may not admit to having reached fatigue, resulting in inaccurate results of the experiment. In this experiment, questionnaires were used. A score of 4, 3, 2 and 1 was recorded for not conforming, slightly conforming, relatively conforming and fully conforming, respectively, i.e. the lower the score, the greater the fatigue level responded to. The table used for the experiment is shown in Table 1 below:</p>
+<p>Table 1 Fatigue questionnaire</p>
+<p><img alt="Untitled" src="../%E5%85%A8%E5%9B%BD%E5%A4%A7%E5%AD%A6%E7%94%9F%E7%94%B5%E5%AD%90%E8%AE%BE%E8%AE%A1%E7%AB%9E%E8%B5%9B%E9%A1%B9%E7%9B%AE%EF%BC%9A%E7%96%B2%E5%8A%B3%E9%A9%BE%E9%A9%B6%E6%A3%80%E6%B5%8B%E9%A1%B9%E7%9B%AE%20184be3c8a0024b18b39cf2f516f3471f/Untitled.png" /></p>
+<h3 id="312-objective-fatigue-detection">3.1.2 Objective fatigue detection<a class="headerlink" href="#312-objective-fatigue-detection" title="Permanent link">&para;</a></h3>
+<p>There are many ways to evaluate fatigue using an objective approach without the subjective response of the subject, for example, fatigue imbalance fatigue directly affects the driver's safe driving, which is currently a subject of interest to scholars at home and abroad [6]. Another example is that with the help of the measurement of eye movements, for each of the indicators that can be detected in human eye movements, among which the eye movement indicators related to visual fatigue are mainly blinking, focus, eye jump and pupil changes, etc., through which a more objective evaluation of fatigue can be made [7].</p>
+<p>However, the detection method as mentioned above has high instrument requirements and is time-consuming, which is not applicable to the higher density of measuring once required in this experiment, and although it is accurate and scientific, it cannot detect the characteristics of the system for real-time detection. Therefore, this test experiment uses the detection of whether the concentration of attention to carry out the objective detection of fatigue.</p>
+<h2 id="32-test-environment-construction">3.2 Test environment construction<a class="headerlink" href="#32-test-environment-construction" title="Permanent link">&para;</a></h2>
+<h3 id="321-installation-of-the-tested-equipment">3.2.1 Installation of the tested equipment<a class="headerlink" href="#321-installation-of-the-tested-equipment" title="Permanent link">&para;</a></h3>
+<p>After connecting the circuit cable, the camera of the work is placed 8~15 cm in front of the eyes of the person under test to ensure that the image of the driver's face can be taken. The camera of the work as shown in the figure has been fixed on top of the embedded system board, so it needs to be placed as a whole.</p>
+<h3 id="322-validation-environment-construction">3.2.2 Validation environment construction<a class="headerlink" href="#322-validation-environment-construction" title="Permanent link">&para;</a></h3>
+<p>As the validated data collection for this experiment, as a criterion for fatigue or not, the environment includes the two methods already mentioned in the previous section, the first one is a questionnaire and the second one is a reaction speed detection by behavioral approach.</p>
+<p>The questionnaire is printed in sufficient quantity and neatly placed, and the test subject is asked to fill out the questionnaire requiring the test subject to fill out the questionnaire once when the alarm clock goes off and the reaction speed test is performed.</p>
+<p>There are still many methods for reaction speed testing, and this experiment takes a simple approach based on an open source project to create the reaction speed testing application shown in the figure, which runs on a browser. Unlike the original project, the application was modified in this experiment by adding the function of averaging, i.e., each test was performed five times in a row, each time for 2 seconds, and the average and variance were obtained. If the variance is large then the reaction speed test will be repeated as a way to ensure the accuracy of the test.</p>
+<p>This approach is different from the common reaction, speed test, such as selecting the color fast to calculate the reaction time, etc. The working principle of the application used in this experiment is. At "1" select the ball speed, "2" click start, "4" at the ball will move to the left, when the movement to "5 When the ball reaches the wall blocked by "5", it will not be visible. The test subject will be asked to anticipate when the ball will reach the end point "6" and click the end button to end the measurement. The test subject's judgment error will be displayed at "3", and this value will be used to evaluate the test subject's reaction speed, etc. The test interface is shown in Figure 7 below and is labeled as follows: (1) speed adjustment button, (2) start (stop) button, (3) result display, (4) ball moving to the right, (5) wall hiding the ball, and (6) end point.</p>
+<p><img alt="1683639357929.png" src="../img/1683639357929.png" /></p>
+<p>Figure 7 Reaction speed test interface</p>
+<h2 id="33-test-equipment-and-data">3.3 Test Equipment and Data<a class="headerlink" href="#33-test-equipment-and-data" title="Permanent link">&para;</a></h2>
+<p>The equipment in the test chamber consists of two parts, a fixed part and a wearable part. The wearable part is used to measure EEG signals, while the fixed part is used for signal processing and visual signal acquisition. The data recording is done through Renesas' serial port to transfer the data to the computer serial monitor and save it as a table.</p>
+<h3 id="331-test-equipment">3.3.1 Test equipment<a class="headerlink" href="#331-test-equipment" title="Permanent link">&para;</a></h3>
+<p>In this work, data monitoring can be obtained in two ways, the first is through the embedded system supported by the display and serial output for local monitoring of data, the second is directly through the cloud to monitor data and data trends. Here, for convenience, the first one is taken to observe data from the monitor and record data through the serial port. The format of the serial output data is "xx,xx,xx", which is easy to view in the serial monitoring and save as csv format for analysis. Among them, the data packets are, in order, activity, concentration, and visual fatigue index. Among them, activity (EEGCV) is the coefficient of variation of EEG data within the sampling time, the larger it is, the more active it is; concentration ranges from 0-100, the higher it is, the higher the concentration level; visual fatigue index is in ms, which is the blink time of visual detection. The process was recorded by the experimenter, and the subject was asked to concentrate on what he or she was doing. The data recorded by the monitor include brain activity, concentration level, and visual fatigue index, and a warning message is provided, as shown in Figure 8.</p>
+<p><img alt="1683639372203.png" src="../img/1683639372203.png" /></p>
+<p>Figure 8 Data displayed by the monitor</p>
+<h3 id="331-data-recording">3.3.1 Data recording<a class="headerlink" href="#331-data-recording" title="Permanent link">&para;</a></h3>
+<p>The data is obtained among the records with an interval of 3min and a duration of 1h. The data is displayed on the AliCloud platform. As shown in Figure 9, there are obvious fluctuations visible. Subjective feedback scores as the standard of fatigue, less than half of the score, that is, 14 points, will be obtained, and the reaction speed test is used as a reference to ensure that the tested personnel have not disguised the fact that they have been fatigued. (Note: Since the relevant functions have not been completed yet, the apparent fatigue is simulated data at this time.)</p>
+<p><img alt="1683639382782.png" src="../img/1683639382782.png" /></p>
+<p>Figure 9 Data graphs in the validation experiment (web application)</p>
+<p>The three subjects were tested at different times of the day and the data obtained were collated as shown in Table 2.</p>
+<p>Table 2 Data collation records of the three test subjects</p>
+<p><img alt="Untitled" src="../%E5%85%A8%E5%9B%BD%E5%A4%A7%E5%AD%A6%E7%94%9F%E7%94%B5%E5%AD%90%E8%AE%BE%E8%AE%A1%E7%AB%9E%E8%B5%9B%E9%A1%B9%E7%9B%AE%EF%BC%9A%E7%96%B2%E5%8A%B3%E9%A9%BE%E9%A9%B6%E6%A3%80%E6%B5%8B%E9%A1%B9%E7%9B%AE%20184be3c8a0024b18b39cf2f516f3471f/Untitled%201.png" /></p>
+<h2 id="34-analysis-of-results">3.4 Analysis of results<a class="headerlink" href="#34-analysis-of-results" title="Permanent link">&para;</a></h2>
+<p>The accuracy rate was analyzed and calculated to obtain that the average accuracy rate reached 73%, which proves that the threshold selection and system functions are able to meet the requirements.</p>
+<p>This system - based on the embedded driver fatigue detection cloud system, using a dual way (EEG indicator detection and iris detection technology) that does not interfere with the driver to monitor the driver's fatigue in real time and alert reminders, and real-time data display records through the Aliyun IOT platform, which can further overcome the driver's bad driving habits It can further overcome drivers' bad driving habits and ensure their personal safety.</p>
+<h2 id="41-main-innovation-points">4.1 Main innovation points<a class="headerlink" href="#41-main-innovation-points" title="Permanent link">&para;</a></h2>
+<h3 id="411-no-interference-with-the-drivers-test-method">4.1.1. No interference with the driver's test method<a class="headerlink" href="#411-no-interference-with-the-drivers-test-method" title="Permanent link">&para;</a></h3>
+<p>The system is based on Renesas platform through the dynamic configuration of the processor DRP function, can fully realize the requirements of on-board, low power consumption, fast speed, etc., in the driver drowsy, fatigue, head down to play with cell phones and other dangerous driving behavior in the first time to fatigue degree alarm, so as to avoid accidents.</p>
+<h3 id="412-adopt-the-identification-method-with-high-accuracy-high-robustness-and-high-reliability-it-is-not-affected-by-the-usage-conditions-such-as-wearing-glasses-and-sunglasses-during-the-detection-process">4.1.2. Adopt the identification method with high accuracy, high robustness and high reliability: it is not affected by the usage conditions such as wearing glasses and sunglasses during the detection process.<a class="headerlink" href="#412-adopt-the-identification-method-with-high-accuracy-high-robustness-and-high-reliability-it-is-not-affected-by-the-usage-conditions-such-as-wearing-glasses-and-sunglasses-during-the-detection-process" title="Permanent link">&para;</a></h3>
+<h3 id="413-adopt-multiple-means-to-alert-drivers-to-avoid-poor-alerting-effect-by-a-single-alerting-method">4.1.3. Adopt multiple means to alert drivers to avoid poor alerting effect by a single alerting method.<a class="headerlink" href="#413-adopt-multiple-means-to-alert-drivers-to-avoid-poor-alerting-effect-by-a-single-alerting-method" title="Permanent link">&para;</a></h3>
+<h3 id="414-realize-intelligent-interconnection-visual-acquisition-based-on-renesas-rza2m-embedded-platform-eeg-indicator-acquisition-based-on-mindlink-two-interactive-communication-combined-with-physiological-indicators-and-visual-indicators-to-determine-the-degree-of-fatigue-to-avoid-abnormal-misjudgment-so-that-the-system-has-good-robustness">4.1.4. Realize intelligent interconnection: visual acquisition based on Renesas RZ/A2M embedded platform, EEG indicator acquisition based on MindLink two interactive communication, combined with physiological indicators and visual indicators to determine the degree of fatigue, to avoid abnormal misjudgment, so that the system has good robustness.<a class="headerlink" href="#414-realize-intelligent-interconnection-visual-acquisition-based-on-renesas-rza2m-embedded-platform-eeg-indicator-acquisition-based-on-mindlink-two-interactive-communication-combined-with-physiological-indicators-and-visual-indicators-to-determine-the-degree-of-fatigue-to-avoid-abnormal-misjudgment-so-that-the-system-has-good-robustness" title="Permanent link">&para;</a></h3>
+<p>(1) Voice prompts: The announcement tone of the host can be set, and the volume and tone of the prompts will change according to the degree of alarm urgency.</p>
+<p>(2) Comprehensive determination: The data integrates "brain activity", "concentration" and "visual fatigue" to form a unified data set output to overcome error-induced misjudgment.</p>
+<p>(3) Remote alert: After detecting an alarm, the system will send the information back to the big data cloud, which will send a warning to the client (cell phone, etc.).</p>
+<p>(4) Long-term monitoring capability: Local data is isolated and inflexible, which does not facilitate the analysis of big data. In this work, the data will be packaged and uploaded to Ali cloud IOT platform at regular intervals. With a certain amount of data, further mining and analysis is carried out to get a longer period of time span view of the driver's fatigue at work.</p>
+<h2 id="51-deficiencies-and-improvements">5.1 Deficiencies and improvements<a class="headerlink" href="#51-deficiencies-and-improvements" title="Permanent link">&para;</a></h2>
+<h3 id="511-insufficient-iris-detection-recognition-rate">5.1.1 Insufficient iris detection recognition rate<a class="headerlink" href="#511-insufficient-iris-detection-recognition-rate" title="Permanent link">&para;</a></h3>
+<p>The basic principle of iris detection is that the iris is detected by identifying the location of the two eyes with a rough detection and then performing a circle matching. In order to reduce the difficulty of detection, the location of the detection is limited to a certain range. However, this leads to sensitivity to eye distance from the camera, posture, etc. when recognizing. When conducting real-world tests, it was found that detection was only possible when the eye was about 10 cm directly in front of the camera.</p>
+<p>The planned improvement solution is to add a face detector before iris detection to first lock the position of the face and then perform iris detection, which is expected to greatly improve recognition efficiency.</p>
+<h3 id="512-insufficient-amount-of-data-in-the-experiment">5.1.2 Insufficient amount of data in the experiment<a class="headerlink" href="#512-insufficient-amount-of-data-in-the-experiment" title="Permanent link">&para;</a></h3>
+<p>In the data mining, only 1K amount of data is used, which makes the reliability or not high. The next step will be to collect EEG and visual data of different drivers in different environments to improve the system stability.</p>
+<h2 id="51-competition-summary">5.1 Competition Summary<a class="headerlink" href="#51-competition-summary" title="Permanent link">&para;</a></h2>
+<p>In this competition, the competition students were not able to participate in the competition together in the field due to the epidemic. The whole process of making, experimenting and debugging took nearly two months, and the progress of the work completion was slow, but the team overcame many difficulties and finally finished the system with certain functions. By the time of submission, there are still functions that have not been debugged, including: the determination of the fatigue threshold of the visual display, face detection mechanism perfection, etc.</p>
+<h2 id="appendix-i-mqtt-way-to-connect-to-ali-cloud-platform">Appendix I MQTT way to connect to Ali cloud platform<a class="headerlink" href="#appendix-i-mqtt-way-to-connect-to-ali-cloud-platform" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">WiFiClient</span><span class="w"> </span><span class="n">espClient</span><span class="p">;</span>
+
+<span class="n">PubSubClient</span><span class="w">  </span><span class="nf">client</span><span class="p">(</span><span class="n">espClient</span><span class="p">);</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">callback</span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">topic</span><span class="p">,</span><span class="w"> </span><span class="n">byte</span><span class="w"> </span><span class="o">*</span><span class="n">payload</span><span class="p">,</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">length</span><span class="p">)</span>
+
+<span class="p">{</span>
+
+<span class="err">……</span>
+
+<span class="p">}</span>
+
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">wifiinit</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="cm">/* connected preset wifi */</span>
+
+<span class="p">{</span><span class="n">WiFi</span><span class="p">.</span><span class="n">mode</span><span class="p">(</span><span class="n">WIFI_STA</span><span class="p">);</span>
+
+<span class="n">WiFi</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="n">WIFI_SSID</span><span class="p">,</span><span class="w"> </span><span class="n">WIFI_PASSWD</span><span class="p">);</span>
+
+<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">WiFi</span><span class="p">.</span><span class="n">status</span><span class="p">()</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">WL_CONNECTED</span><span class="p">)</span>
+
+<span class="p">{</span><span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
+
+<span class="n">client</span><span class="p">.</span><span class="n">setServer</span><span class="p">(</span><span class="n">MQTT_SERVER</span><span class="p">,</span><span class="w"> </span><span class="n">MQTT_PORT</span><span class="p">);</span><span class="w">   </span><span class="cm">/* After connecting to wifi, connect the MQTT server */</span>
+
+<span class="n">client</span><span class="p">.</span><span class="n">setCallback</span><span class="p">(</span><span class="n">callback</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">mqttCheckConnect</span><span class="p">()</span>
+
+<span class="p">{</span><span class="cm">/* The MQTT key used to use the correct network is normal and can be connected to the Alibaba Cloud platform, otherwise */</span>
+
+<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">client</span><span class="p">.</span><span class="n">connected</span><span class="p">())</span>
+
+<span class="p">{</span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="err">“</span><span class="n">Connecting</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">MQTT</span><span class="w"> </span><span class="n">Server</span><span class="w"> </span><span class="err">…”</span><span class="p">);</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">client</span><span class="p">.</span><span class="n">connect</span><span class="p">(</span><span class="n">CLIENT_ID</span><span class="p">,</span><span class="w"> </span><span class="n">MQTT_USRNAME</span><span class="p">,</span><span class="w"> </span><span class="n">MQTT_PASSWD</span><span class="p">))</span>
+
+<span class="p">{</span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="err">“</span><span class="n">MQTT</span><span class="w"> </span><span class="n">Connected</span><span class="o">!</span><span class="err">”</span><span class="p">);}</span>
+
+<span class="k">else</span><span class="p">{</span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="err">“</span><span class="n">MQTT</span><span class="w"> </span><span class="n">Connect</span><span class="w"> </span><span class="n">err</span><span class="o">:</span><span class="err">”</span><span class="p">);</span>
+
+<span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">client</span><span class="p">.</span><span class="n">state</span><span class="p">());</span>
+
+<span class="n">delay</span><span class="p">(</span><span class="mi">5000</span><span class="p">);}</span>
+
+<span class="p">}</span>
+
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">mqttIntervalPost</span><span class="p">()</span><span class="w">                        </span><span class="cm">/* Mqtt protocol to make a post from Alibaba Cloud Server */</span>
+
+<span class="p">{</span><span class="kt">char</span><span class="w"> </span><span class="n">param</span><span class="p">[</span><span class="mi">256</span><span class="p">];</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">jsonBuf</span><span class="p">[</span><span class="mi">256</span><span class="p">];</span>
+
+<span class="n">sprintf</span><span class="p">(</span><span class="n">param</span><span class="p">,</span><span class="err">“</span><span class="p">{</span><span class="err">\”</span><span class="n">EEGCV</span><span class="err">\“</span><span class="o">:%</span><span class="n">f</span><span class="p">,</span><span class="err">\”</span><span class="n">Attention</span><span class="err">\“</span><span class="o">:%</span><span class="n">d</span><span class="p">,</span><span class="err">\”</span><span class="n">VisualFatigue</span><span class="err">\“</span><span class="o">:%</span><span class="n">d</span><span class="p">,</span><span class="err">\”</span><span class="n">alarm</span><span class="err">\“</span><span class="o">:%</span><span class="n">d</span><span class="p">}</span><span class="err">”</span><span class="p">,</span><span class="w"> </span><span class="n">EEGcv</span><span class="p">,</span><span class="n">attion</span><span class="p">,</span><span class="n">vision_fatigue_index</span><span class="p">,</span><span class="n">alarm</span><span class="p">);</span>
+
+<span class="n">sprintf</span><span class="p">(</span><span class="n">jsonBuf</span><span class="p">,</span><span class="w"> </span><span class="n">ALINK_BODY_FORMAT</span><span class="p">,</span><span class="w"> </span><span class="n">param</span><span class="p">);</span>
+
+<span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">jsonBuf</span><span class="p">);</span>
+
+<span class="n">boolean</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">client</span><span class="p">.</span><span class="n">publish</span><span class="p">(</span><span class="n">ALINK_TOPIC_PROP_POST</span><span class="p">,</span><span class="w"> </span><span class="n">jsonBuf</span><span class="p">);</span>
+
+<span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">d</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+
+<h2 id="appendix-ii-eeg-signal-median-filtering-code">Appendix II EEG signal median filtering code<a class="headerlink" href="#appendix-ii-eeg-signal-median-filtering-code" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">float</span><span class="w"> </span><span class="nf">compare</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="o">*</span><span class="n">value_buf</span><span class="p">);</span><span class="w">       </span><span class="c1">//Medium bubbling method</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">mediam_noise</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">NUM_process</span><span class="p">);</span><span class="w">       </span><span class="c1">//Medium -level filtering for removing noise (ophthalmochemical, ECG)</span>
+
+<span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">N</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="c1">//Continuous sampling n times (n to draw the number) for medium -bit value filtering</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">       </span><span class="c1">//Count variable</span>
+
+<span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">PROCESSNUM</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">512</span><span class="p">;</span><span class="w">       </span><span class="c1">//Each filter processing data amount</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">mediam_noise</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">NUM_process</span><span class="p">)</span><span class="w">       </span><span class="c1">//Medium -level filtering for removing noise (ophthalmochemical, ECG)</span>
+
+<span class="p">{</span><span class="w">       </span><span class="kt">float</span><span class="w"> </span><span class="n">temp1</span><span class="p">[</span><span class="n">PROCESSNUM</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">};</span>
+
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">NUM_process</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w">  </span><span class="n">temp1</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Brain_data</span><span class="p">[</span><span class="n">i</span><span class="p">];</span><span class="c1">//Pay the data to TEMP</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">NUM_process</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">N</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="p">)</span>
+
+<span class="p">{</span><span class="w">       </span><span class="n">temp1</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">compare</span><span class="p">(</span><span class="o">&amp;</span><span class="n">temp1</span><span class="p">[</span><span class="n">j</span><span class="p">]);</span>
+
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">N</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+
+<span class="n">temp1</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Brain_data</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+
+<span class="p">}</span>
+
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">NUM_process</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">N</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w">  </span><span class="n">Brain_data</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">temp1</span><span class="p">[</span><span class="n">i</span><span class="p">];</span><span class="c1">//TEMP variable copy to data</span>
+
+<span class="p">}</span>
+
+<span class="kt">float</span><span class="w"> </span><span class="nf">compare</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="o">*</span><span class="n">value_buf</span><span class="p">)</span><span class="w">       </span><span class="c1">//Medium bubbling method</span>
+
+<span class="p">{</span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">ll</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">ll</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">N</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">ll</span><span class="o">++</span><span class="p">)</span><span class="w">           </span><span class="c1">//Bubbling method</span>
+
+<span class="p">{</span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">N</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">ll</span><span class="p">;</span><span class="w"> </span><span class="n">k</span><span class="o">++</span><span class="p">)</span>
+
+<span class="p">{</span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="p">(</span><span class="n">value_buf</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">k</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;*</span><span class="w"> </span><span class="p">(</span><span class="n">value_buf</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">))</span>
+
+<span class="p">{</span><span class="kt">float</span><span class="w"> </span><span class="n">temp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">*</span><span class="p">(</span><span class="n">value_buf</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">k</span><span class="p">);</span>
+
+<span class="o">*</span><span class="p">(</span><span class="n">value_buf</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">k</span><span class="p">)</span><span class="w"> </span><span class="o">=*</span><span class="w"> </span><span class="p">(</span><span class="n">value_buf</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+
+<span class="o">*</span><span class="p">(</span><span class="n">value_buf</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">temp</span><span class="p">;</span>
+
+<span class="p">}</span>
+
+<span class="p">}</span>
+
+<span class="p">}</span>
+
+<span class="k">return</span><span class="w"> </span><span class="o">*</span><span class="p">(</span><span class="n">value_buf</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">N</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
+
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+
+<h2 id="references">References:<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
+<p>[1] Wu Qun. Research on driving fatigue detection method based on ECG and EEG signals [D]. Hangzhou: School of Computer Science and Technology, Zhejiang University, 2008.</p>
+<p>[2]Qu Peishu,Dong Wenhui. Human eye state recognition based on eyelid curvature and fuzzy logic. Computer Engineering and Science, 2007, 29(8):50-53.</p>
+<p>[3] Zhou N, Li ZM. A clutter suppression method with wavelet domain smoothing filtering [J]. Journal of Electronics, 2010, 38(7):</p>
+<p>[4] Mo Xiongqiang. Research on EEG-based fatigue detection method [D]. Yanshan University, 2009.</p>
+<p>[5]HU Wenqiang, MA Jin, HAN Wendong. prevention and monitoring means of flying fatigue. chinese Journal of Clinic Rehabilitation,2004,8(3): 542-543</p>
+<p>[6] JIN Jian. Research on the mechanism of driving fatigue and the feeder model [D]. Southwest Jiaotong University, 2002.</p>
+<p>[7] Huang Yi. Research on visual fatigue evaluation method and application of parallax type 3D display system[D]. Beijing University of Technology,2015.</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.fac441b0.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+        <script src="../../javascripts/MathJax.js"></script>
+      
+    
+  </body>
+</html>
