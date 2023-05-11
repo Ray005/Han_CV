@@ -1,0 +1,769 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../01NUEDC_project_Driving_Fatigue_Real-time_Detection_and_Pre-warning_System_%28Published%29/">
+      
+      
+        <link rel="next" href="../03PLC%20Temp%20Monitor%20Coded%20with%20Python%20TK/">
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.11">
+    
+    
+      
+        <title>本科论文：基于ROS的无人机调平系统（节选） - HanCV</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.85bb2934.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.a6bdf11c.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="brown" data-md-color-accent="deep-orange">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ros" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../" title="HanCV" class="md-header__button md-logo" aria-label="HanCV" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HanCV
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              本科论文：基于ROS的无人机调平系统（节选）
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+      <div class="md-header__option">
+        <div class="md-select">
+          
+          <button class="md-header__button md-icon" aria-label="选择当前语言">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7 1.62-4.33L19.12 17h-3.24Z"/></svg>
+          </button>
+          <div class="md-select__inner">
+            <ul class="md-select__list">
+              
+                <li class="md-select__item">
+                  <a href="../../../Project/02Graduation%20Thesis/" hreflang="en" class="md-select__link">
+                    English
+                  </a>
+                </li>
+              
+                <li class="md-select__item">
+                  <a href="./" hreflang="zh" class="md-select__link">
+                    简体中文
+                  </a>
+                </li>
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../" title="HanCV" class="md-nav__button md-logo" aria-label="HanCV" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    HanCV
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        【首页】 韩衍的简历
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          Project
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Project
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01NUEDC_project_Driving_Fatigue_Real-time_Detection_and_Pre-warning_System_%28Published%29/" class="md-nav__link">
+        全国大学生电子设计竞赛项目：疲劳驾驶检测项目（已出版）
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          本科论文：基于ROS的无人机调平系统（节选）
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        本科论文：基于ROS的无人机调平系统（节选）
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    项目视频
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    摘要
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    半实物测试——实验箱姿态检测实验
+  </a>
+  
+    <nav class="md-nav" aria-label="半实物测试——实验箱姿态检测实验">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mahony" class="md-nav__link">
+    Mahony互补滤波算法与流程
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    融合结果
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    履带车随动平台姿态检测与简单调平系统设计
+  </a>
+  
+    <nav class="md-nav" aria-label="履带车随动平台姿态检测与简单调平系统设计">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    姿态检测子系统
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ros_1" class="md-nav__link">
+    基于ROS的信息传递系统
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stm32" class="md-nav__link">
+    STM32下位机节点与硬件设计
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    调平控制子系统
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    系统效果
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    总结与展望
+  </a>
+  
+    <nav class="md-nav" aria-label="总结与展望">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    主要工作
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    未来与展望
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03PLC%20Temp%20Monitor%20Coded%20with%20Python%20TK/" class="md-nav__link">
+        PLC温度监控 使用Python TK编写的上位机
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    项目视频
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    摘要
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    半实物测试——实验箱姿态检测实验
+  </a>
+  
+    <nav class="md-nav" aria-label="半实物测试——实验箱姿态检测实验">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mahony" class="md-nav__link">
+    Mahony互补滤波算法与流程
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    融合结果
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    履带车随动平台姿态检测与简单调平系统设计
+  </a>
+  
+    <nav class="md-nav" aria-label="履带车随动平台姿态检测与简单调平系统设计">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    姿态检测子系统
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ros_1" class="md-nav__link">
+    基于ROS的信息传递系统
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stm32" class="md-nav__link">
+    STM32下位机节点与硬件设计
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    调平控制子系统
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    系统效果
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    总结与展望
+  </a>
+  
+    <nav class="md-nav" aria-label="总结与展望">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    主要工作
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    未来与展望
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="ros">本科论文：基于ROS的无人机调平系统（节选）<a class="headerlink" href="#ros" title="Permanent link">&para;</a></h1>
+<h2 id="_1">项目视频<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<div style="position: relative; padding: 30% 45%;">
+
+<iframe style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;" src="https://player.bilibili.com/player.html?aid=953554143&bvid=BV1Ms4y1g7dZ&cid=1125967224&page=1&autoplay=0&danmuku=0" frameborder="no" scrolling="no">
+
+</iframe>
+
+</div>
+<p>【Project#2】随动系统展示 站点：Bilibili</p>
+<h2 id="_2">摘要<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>首先，进行基于实验箱的半实物仿真，采集IMU数据后，使用基于陀螺仪与地磁传感器的Mahony互补滤波算法进行姿态解算，并调整互补滤波算法中的PI调节器参数，达到更高的姿态解算精度。通过调整频率等参数，提高了系统实时性，以期解决控制滞后或者控制精细程度不够的问题。
+最后，在系统设计过程中，使用ROS作为信息通信桥梁，获取姿态信息。并使用STM32编写控制电机的子节点，编写了简单的PID控制程序，验证系统姿态解算的实用性。其中STM32编写的子节点通过串口与上位机电脑通信，ROS中使用Python编程，具有良好的可移植性，可应用于车载计算机。</p>
+<p><strong>关键词</strong>：姿态检测，随动平台，IMU，ROS</p>
+<h2 id="_3">半实物测试——实验箱姿态检测实验<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>本实验的实验箱具有实时解算姿态的能力，从IMU中读取传感器参数，送入MATLAB进行解算。分别进行了仅基于陀螺仪的姿态解算与基于陀螺仪与地磁传感器计的姿态解算，与实验箱中基于陀螺仪与加速度计的纯惯性方法进行对比。</p>
+<h3 id="mahony">Mahony互补滤波算法与流程<a class="headerlink" href="#mahony" title="Permanent link">&para;</a></h3>
+<p>互补滤波要求两个信号的干扰噪声处在不同的频率，通过设置两个滤波器的截止频率，确保融合后的信号能够覆盖需求频率。在 IMU 的姿态估计中，互补滤波器对陀螺仪（低频噪声）使用高通滤波；对加速度/磁力计（高频噪声）使用低频滤波。互补滤波中，两个滤波器的截止频率一致，此时就需要根据有用频率的值对其进行取舍。以下为Mahony互补滤波算法的公式，通过对下式的迭代即可解算姿态。</p>
+<p><img alt="Untitled" src="../%E6%9C%AC%E7%A7%91%E8%AE%BA%E6%96%87%EF%BC%9A%E5%9F%BA%E4%BA%8EROS%E7%9A%84%E6%97%A0%E4%BA%BA%E6%9C%BA%E8%B0%83%E5%B9%B3%E7%B3%BB%E7%BB%9F%EF%BC%88%E8%8A%82%E9%80%89%EF%BC%89%20adb834963fb14b4f9b0d34075949c992/Untitled.png" /></p>
+<p><img alt="Untitled" src="../%E6%9C%AC%E7%A7%91%E8%AE%BA%E6%96%87%EF%BC%9A%E5%9F%BA%E4%BA%8EROS%E7%9A%84%E6%97%A0%E4%BA%BA%E6%9C%BA%E8%B0%83%E5%B9%B3%E7%B3%BB%E7%BB%9F%EF%BC%88%E8%8A%82%E9%80%89%EF%BC%89%20adb834963fb14b4f9b0d34075949c992/Untitled%201.png" /></p>
+<p><img alt="Untitled" src="../%E6%9C%AC%E7%A7%91%E8%AE%BA%E6%96%87%EF%BC%9A%E5%9F%BA%E4%BA%8EROS%E7%9A%84%E6%97%A0%E4%BA%BA%E6%9C%BA%E8%B0%83%E5%B9%B3%E7%B3%BB%E7%BB%9F%EF%BC%88%E8%8A%82%E9%80%89%EF%BC%89%20adb834963fb14b4f9b0d34075949c992/Untitled%202.png" /></p>
+<p>表示系统姿态估计的四元数表示；是经过 PI 调节器产生的新息；表示实测的惯性向量与预测的向量的误差关系。最后一项可以理解为，相互重合的向量叉乘积结果为0，而未重合的偏差即可通过这一项叉乘来体现。</p>
+<p>Mahony互补滤波算法的重点在于使用了经典的PI补偿器来计算补偿值，这一PID控制系统中的控制器具有类似的数学形式，其功能也类似，用于误差的传递。其中比例项用于控制传感器的“可信度”，积分项用于消除静态误差。</p>
+<p><img alt="Untitled" src="../%E6%9C%AC%E7%A7%91%E8%AE%BA%E6%96%87%EF%BC%9A%E5%9F%BA%E4%BA%8EROS%E7%9A%84%E6%97%A0%E4%BA%BA%E6%9C%BA%E8%B0%83%E5%B9%B3%E7%B3%BB%E7%BB%9F%EF%BC%88%E8%8A%82%E9%80%89%EF%BC%89%20adb834963fb14b4f9b0d34075949c992/Untitled%203.png" /></p>
+<p>图 Mahony互补滤波算法流程图</p>
+<h3 id="_4">融合结果<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p>由于基准数据是由IMU（陀螺仪与加速度计）融合得来的，在较短的积分时间内（1分钟以内）具有较好的动态特性与准确性，可以作为参照数据对比看出本实验的效果。本实验中使用Mahony互补滤波，与卡尔曼滤波相似，Mahony 滤波也分为预测-校正。其中有两个参数、，其参数值将影响滤波效果。用于控制加速度计和陀螺仪之间的交叉频率，用于校正陀螺仪误差。下为取不同值时的效果，可以看出当取0.1时，可以达到较好的效果。</p>
+<p><img alt="Untitled" src="../%E6%9C%AC%E7%A7%91%E8%AE%BA%E6%96%87%EF%BC%9A%E5%9F%BA%E4%BA%8EROS%E7%9A%84%E6%97%A0%E4%BA%BA%E6%9C%BA%E8%B0%83%E5%B9%B3%E7%B3%BB%E7%BB%9F%EF%BC%88%E8%8A%82%E9%80%89%EF%BC%89%20adb834963fb14b4f9b0d34075949c992/Untitled%204.png" /></p>
+<p>图 陀螺仪与电磁传感器AHRS姿态系统卡尔曼滤波效果图</p>
+<h2 id="_5">履带车随动平台姿态检测与简单调平系统设计<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<p>上述实验基本证明姿态解算的可行性，本章节进行系统设计。系统主要由姿态检测子系统、信息传递子系统与调平控制子系统组成，其中姿态检测子系统使用handsfree hfi_a9型号IMU进行姿态测量，它是具有九轴传感器，即三轴陀螺仪，三轴加速度计，三轴磁力计的IMU传感器，能够直接输出姿态信息。信息传递子系统基于ROS，与使用C语言，在STM32平台编程的电机下位机通信，进行反馈与控制。最后调用调平控制子系统，使用PID控制算法进行姿态控制。</p>
+<h3 id="_6">姿态检测子系统<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<ul>
+<li>基本操作</li>
+</ul>
+<p>利用hfi_a9 IMU检测车体姿态，在ROS环境下使用IMU。准备工作，下载驱动软件压缩包。Ubuntu20.04，安装的是ROS-Noetic版本，对应的python版本是python3，下载python3驱动软件压缩包。安装 ros_imu依赖包。打开一个终端，在终端中输入。创建工作空间，创建对应目录后将之前下载好的软件驱动压缩包解压后，提取到 src 目录下。编译并设置环境变量。检查是否能检测到设备，连接IMU的USB，检查电脑能否识别到 ttyUSB0，检测到ttyUSB0后，给ttyUSB0 赋权限。</p>
+<p>通过 USB 连接线将 IMU 和电脑连接，运行 ROS 驱动可视化程序。</p>
+<p><img alt="Untitled" src="../%E6%9C%AC%E7%A7%91%E8%AE%BA%E6%96%87%EF%BC%9A%E5%9F%BA%E4%BA%8EROS%E7%9A%84%E6%97%A0%E4%BA%BA%E6%9C%BA%E8%B0%83%E5%B9%B3%E7%B3%BB%E7%BB%9F%EF%BC%88%E8%8A%82%E9%80%89%EF%BC%89%20adb834963fb14b4f9b0d34075949c992/Untitled%205.png" /></p>
+<p>图5.1 可视化程序</p>
+<p>运行脚本获取 IMU 欧拉角格式数据：Roll（翻滚），Pitch（俯仰），Yaw（偏航）。此时，转动 IMU，就会看到 rviz 上面的模型的变化了，实现车体姿态的实时检测。</p>
+<p><img alt="Untitled" src="../%E6%9C%AC%E7%A7%91%E8%AE%BA%E6%96%87%EF%BC%9A%E5%9F%BA%E4%BA%8EROS%E7%9A%84%E6%97%A0%E4%BA%BA%E6%9C%BA%E8%B0%83%E5%B9%B3%E7%B3%BB%E7%BB%9F%EF%BC%88%E8%8A%82%E9%80%89%EF%BC%89%20adb834963fb14b4f9b0d34075949c992/Untitled%206.png" /></p>
+<p>图5.2获取欧拉角数据</p>
+<ul>
+<li>安装与调试</li>
+</ul>
+<p>为确定车体姿态而不影响降落平台表面的平整度，防止在降落时出现误触的情况，将传感器置于盖板顶部，用于监测车体姿态。这里需要注意，监测对象为车体姿态，而不是调平平台姿态，故不会因为控制系统的稳定性不好造成姿态检测效果受到影响，便于观察姿态检测系统的效果。</p>
+<p><img alt="Untitled" src="../%E6%9C%AC%E7%A7%91%E8%AE%BA%E6%96%87%EF%BC%9A%E5%9F%BA%E4%BA%8EROS%E7%9A%84%E6%97%A0%E4%BA%BA%E6%9C%BA%E8%B0%83%E5%B9%B3%E7%B3%BB%E7%BB%9F%EF%BC%88%E8%8A%82%E9%80%89%EF%BC%89%20adb834963fb14b4f9b0d34075949c992/Untitled%207.png" /></p>
+<p>图5.3 IMU传感器安放位置示意图（左下）</p>
+<p>图中为正在调试中的整个姿态调平系统的主体，平台上的移动电话用于监测姿态变化是否平稳，电机由STM32控制，通过串行通信口反馈信息到电脑上位机的主节点，主节点计算后，将电机速度量信号传递到STM32节点，过程都通过ROS完成，便于复用。</p>
+<h3 id="ros_1">基于ROS的信息传递系统<a class="headerlink" href="#ros_1" title="Permanent link">&para;</a></h3>
+<p>ROS全称机器人操作系统，目前正处于不断更新迭代的时候，广泛用于科研与工业界。其便捷的通信特性十分具有特点，对于本项目的实施具有重要意义，能够增强其模块化程度与可移植性。</p>
+<ul>
+<li>主节点与通信流程</li>
+</ul>
+<p>rqt是使用qt编写的，ROS平台下的可视化工具。使用rqt_graph可以将当前节点运行与订阅发布情况，绘制的节点通信总图如下：</p>
+<p><img alt="Untitled" src="../%E6%9C%AC%E7%A7%91%E8%AE%BA%E6%96%87%EF%BC%9A%E5%9F%BA%E4%BA%8EROS%E7%9A%84%E6%97%A0%E4%BA%BA%E6%9C%BA%E8%B0%83%E5%B9%B3%E7%B3%BB%E7%BB%9F%EF%BC%88%E8%8A%82%E9%80%89%EF%BC%89%20adb834963fb14b4f9b0d34075949c992/Untitled%208.png" /></p>
+<p>图5.4 ROS系统通信节点图</p>
+<p>在主节点中，运行着PID控制与接收IMU传感器姿态数据与编码器反馈位置数据的程序。主节点通过发布名为/pwm_duty/node1的话题来控制stm32所连接的电机的PWM占空比，达到控制运动与速度的目的。</p>
+<p>程序中，通过获取到的履带车姿态信息，反推出为保持水平平衡，三推杆应在的位置。同时有着PID系统，在通过整定PID参数后，以推杆所在位置为目标量，输出目标量与实际量之间的差值，并使用PID对差值进行调节，从而达到控制平衡的效果。</p>
+<p><img alt="Untitled" src="../%E6%9C%AC%E7%A7%91%E8%AE%BA%E6%96%87%EF%BC%9A%E5%9F%BA%E4%BA%8EROS%E7%9A%84%E6%97%A0%E4%BA%BA%E6%9C%BA%E8%B0%83%E5%B9%B3%E7%B3%BB%E7%BB%9F%EF%BC%88%E8%8A%82%E9%80%89%EF%BC%89%20adb834963fb14b4f9b0d34075949c992/Untitled%209.png" /></p>
+<p>图5.5主节点程序流程图</p>
+<p>如上图为ROS主节点运行的结构图，通过订阅与发布完成信息交换的流程。回调函数则是在每次接收完信息后进行调用，起到了及时反馈数据，及时计算输出，及时响应的作用。</p>
+<h3 id="stm32">STM32下位机节点与硬件设计<a class="headerlink" href="#stm32" title="Permanent link">&para;</a></h3>
+<p>电路部分，借助STM32定时器的编码器模式，能够简易地对多种编码器信号进行测量。讲编码器的A、B相连接至定时器的端口（STM32只有TIMx_CH1和TIMx_CH2支持编码器模式），此后可以通过调用定时器来实现测速的目的。下图为一个STM32电机节点的硬件电路图。</p>
+<p><img alt="Untitled" src="../%E6%9C%AC%E7%A7%91%E8%AE%BA%E6%96%87%EF%BC%9A%E5%9F%BA%E4%BA%8EROS%E7%9A%84%E6%97%A0%E4%BA%BA%E6%9C%BA%E8%B0%83%E5%B9%B3%E7%B3%BB%E7%BB%9F%EF%BC%88%E8%8A%82%E9%80%89%EF%BC%89%20adb834963fb14b4f9b0d34075949c992/Untitled%2010.png" /></p>
+<p>图5.6通信硬件与电路驱动结构图</p>
+<p>STM32与外界的信息交互包括以下几个部分：送往电机的PWM占空比信号与接收编码器信号，与电脑上位机通信的串口部分。使用PB5引脚产生PWM占空比信号，用以控制电机升降的速度，PB15、PB14用于控制电机正反转。</p>
+<p>STM32下位机节点的程序流程图如下：</p>
+<p><img alt="Untitled" src="../%E6%9C%AC%E7%A7%91%E8%AE%BA%E6%96%87%EF%BC%9A%E5%9F%BA%E4%BA%8EROS%E7%9A%84%E6%97%A0%E4%BA%BA%E6%9C%BA%E8%B0%83%E5%B9%B3%E7%B3%BB%E7%BB%9F%EF%BC%88%E8%8A%82%E9%80%89%EF%BC%89%20adb834963fb14b4f9b0d34075949c992/Untitled%2011.png" /></p>
+<p>图5.7 STM32子节点程序流程图</p>
+<p>使用流程如下:移除电脑的所有串口连接，打开终端，运行roscore后。连接Handsfree A9 IMU，运行姿态解算子节点。打开另一个新终端，运行主节点。连接STM32的串口至电脑，再打开一个新的终端，然后运行子节点。这样，三个ROS的节点就按照顺序启动完成了。PID的程序与参数位于主节点的Python程序中，可以进行修改后及时重启查看效果。</p>
+<h3 id="_7">调平控制子系统<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<p>如上述图中一般，主节点中的回调函数运行了PID控制系统，通过计算其偏差，再使用PID调节器的方法，以位置为随动平台推杆位置为控制目标，进行控制调节。</p>
+<p>对平台的结合尺寸，测得等边三角形的高，其中格的定义为编码器光栅转过的一格。并由几何关系能够将将角度与偏移关系用如下公式表达，并将其应用于计算目标位置。</p>
+<p><img alt="Untitled" src="../%E6%9C%AC%E7%A7%91%E8%AE%BA%E6%96%87%EF%BC%9A%E5%9F%BA%E4%BA%8EROS%E7%9A%84%E6%97%A0%E4%BA%BA%E6%9C%BA%E8%B0%83%E5%B9%B3%E7%B3%BB%E7%BB%9F%EF%BC%88%E8%8A%82%E9%80%89%EF%BC%89%20adb834963fb14b4f9b0d34075949c992/Untitled%2012.png" /></p>
+<p>并且当角度θ为正时，推杆向外运动，θ为负时，回退运动。具有了这一基本的数学模型，便可以使用其作为基本的控制目标量进行控制。</p>
+<p>简单控制系统的PID模型，最终手工整定位置式PID的三个参数为如下时，能够达到较为稳健，响应速度较快的控制效果。同时在程序中使用限幅操作，避免PID输出的值异常，提升模型鲁棒性。</p>
+<p><img alt="Untitled" src="../%E6%9C%AC%E7%A7%91%E8%AE%BA%E6%96%87%EF%BC%9A%E5%9F%BA%E4%BA%8EROS%E7%9A%84%E6%97%A0%E4%BA%BA%E6%9C%BA%E8%B0%83%E5%B9%B3%E7%B3%BB%E7%BB%9F%EF%BC%88%E8%8A%82%E9%80%89%EF%BC%89%20adb834963fb14b4f9b0d34075949c992/Untitled%2013.png" /></p>
+<p>注意，由于要同时订阅并使用两个节点的数据，故需要使用message_filter将其信息同步，并使用同一个回调函数进行控制计算。详细可见附录代码。</p>
+<h3 id="_8">系统效果<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<p>总装后，电路如下所示，共三个节点，每个节点包含TTL转USB串口、PWM驱动器与STM32主控三部分，实验过程中使用杜邦线连接。此外传感器直连电脑。</p>
+<p><img alt="Untitled" src="../%E6%9C%AC%E7%A7%91%E8%AE%BA%E6%96%87%EF%BC%9A%E5%9F%BA%E4%BA%8EROS%E7%9A%84%E6%97%A0%E4%BA%BA%E6%9C%BA%E8%B0%83%E5%B9%B3%E7%B3%BB%E7%BB%9F%EF%BC%88%E8%8A%82%E9%80%89%EF%BC%89%20adb834963fb14b4f9b0d34075949c992/Untitled%2014.png" /></p>
+<p>图5.8电路实装图</p>
+<p>平衡时，姿态如下图所示，进行俯仰轴平衡实验，除正对轴之外，其它两推杆均处于静止状态，以单独测试俯仰轴效果。此时将静止轴置于0位置，运动轴仅具有正向运动自由度，其上开启水平仪监测进行可视化测试。</p>
+<p><img alt="Untitled" src="../%E6%9C%AC%E7%A7%91%E8%AE%BA%E6%96%87%EF%BC%9A%E5%9F%BA%E4%BA%8EROS%E7%9A%84%E6%97%A0%E4%BA%BA%E6%9C%BA%E8%B0%83%E5%B9%B3%E7%B3%BB%E7%BB%9F%EF%BC%88%E8%8A%82%E9%80%89%EF%BC%89%20adb834963fb14b4f9b0d34075949c992/Untitled%2015.png" /></p>
+<p>图5.9 平衡姿态下的随动平台</p>
+<p>然后进行一系列角度的测试，首先进行小角度测试，以盖板另一端为支点，用手动上下移动，模拟现实履带车行进中不确定的震动起伏情况。</p>
+<p>小角度的慢速运动时，随动平台具有较低的延迟与较好地跟随性，用于监测的移动平台显示角度波动几乎为0，此时效果为最佳，是履带车行进常有的振动类型。</p>
+<p>小角度的较快速运动时，延迟性开始显露，随动平台的超调量开始增加，可视化移动平台显示角度波动在1°范围内。</p>
+<p><img alt="Untitled" src="../%E6%9C%AC%E7%A7%91%E8%AE%BA%E6%96%87%EF%BC%9A%E5%9F%BA%E4%BA%8EROS%E7%9A%84%E6%97%A0%E4%BA%BA%E6%9C%BA%E8%B0%83%E5%B9%B3%E7%B3%BB%E7%BB%9F%EF%BC%88%E8%8A%82%E9%80%89%EF%BC%89%20adb834963fb14b4f9b0d34075949c992/Untitled%2016.png" /></p>
+<p>图5.10 小角度时的随动平台</p>
+<p>再进行较大角度的运动测试，在大角度的慢速运动下，仍然具有非常平稳的跟随性，可视化移动平台显示角度波动在1°范围内。仍然具有较好的性能。</p>
+<p>进行大角度的快速运动时，调平跟随延迟升高，超调量增加，震荡收敛时间增加到约为2秒，其综合调平性能大大降低。</p>
+<p><img alt="Untitled" src="../%E6%9C%AC%E7%A7%91%E8%AE%BA%E6%96%87%EF%BC%9A%E5%9F%BA%E4%BA%8EROS%E7%9A%84%E6%97%A0%E4%BA%BA%E6%9C%BA%E8%B0%83%E5%B9%B3%E7%B3%BB%E7%BB%9F%EF%BC%88%E8%8A%82%E9%80%89%EF%BC%89%20adb834963fb14b4f9b0d34075949c992/Untitled%2017.png" /></p>
+<p>图5.11  大角度时的随动平台</p>
+<p>最后得出结论，该系统在小角度下响应迅速且超调量较小，但大角度下响应时间将加大，超调量也较高。且运动速度快的情况下，响应实时间与超调量都将增大。但足以证明，姿态检测部分能够正确传感姿态，且具有一定实用性。</p>
+<h2 id="_9">总结与展望<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
+<h3 id="_10">主要工作<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<p>为实现履带车随动平台姿态检测与简单调平系统的设计，主要从离线数据仿真、硬件传感器半实物测试、履带车随动平台系统设计与验证方面进行实验与设计，完成从理论基础到系统设计的基本流程。并测试了STM32编写下位机，与ROS通信的程序，验证了其可行性。建立了基本调平几何模型，推到其调平公式，并将其应用在PID控制系统中。最终由效果而言，得到了较好地稳定性，得出结论，调平数学模型建立正确，姿态检测系统具有一定实用性。</p>
+<h3 id="_11">未来与展望<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
+<p>可从以下几个方面改进：</p>
+<ul>
+<li>第一，可针对履带车平台的震动特点设计特定姿态检测算法以期达到较好的模型稳定性，且长时工作特性也应该会相应提高。例如进行履带车震动来源分析，响应设计算法。</li>
+<li>第二，调整姿态解算方案，从本设计中的分析来看，纯陀螺仪的姿态解算方法并不具有较好地抗时间漂移能力，虽本实验进行了Mahony互补滤波算法的姿态解算，且证明了其在一定程度上的实用性，但仍具有一定局限性。若在室外条件下，增加使用GPS或北斗全球定位系统的协同滤波算法，将进一步降低姿态解算模型的时间漂移。</li>
+<li>第三，PID控制算法的改良。从目前情况了来看，手动整定的位置式PID控制器，在参数保守的情况下仍然会出现超调现象，这需要更多非线性的方法加入控制器才能够得到更加优秀和高鲁棒性的控制效果。</li>
+<li>第四，增加对PID控制曲线的绘制。应该增加从STM32节点反馈当前位置并记录与目标值偏差的程序代码。这样能够增强对实验结果的把握，更加直观地对控制效果进行观察。</li>
+<li>第五，不使用编码器反馈控制推杆电机，而是使用矢量控制（FOC）方法，针对交流电机进行更加精细的控制。FOC是一种针对交流电机的控制方案，相较于传统的三相控制，它能够对交流电机相位做到更加精细化的控制，能够提高系统的零点漂移。</li>
+<li>第六，同时于随动平台和载机平台安装MEMS惯性传感器，通过两种姿态的反馈，处理冗余传感信息，进一步限制随动平台的跟随误差，提高系统性能。由于本设计中仅使用了安装与底部盖板，与履带车固连的单传感器，通过其姿态反推出推杆位置，这样虽然能够减少不必要的震动给，提高姿态检测系统输出的稳定性，但这样带来的问题是，在随动平台之上的动作没有反馈到控制系统中，会导致响应时间变大。通过冗余的传感器信息，求取其最优解，以期达到更好得控制效果。</li>
+</ul>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.fac441b0.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+        <script src="../../../javascripts/MathJax.js"></script>
+      
+    
+  </body>
+</html>

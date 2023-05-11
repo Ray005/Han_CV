@@ -1,0 +1,769 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../01NUEDC_project_Driving_Fatigue_Real-time_Detection_and_Pre-warning_System_%28Published%29/">
+      
+      
+        <link rel="next" href="../03PLC%20Temp%20Monitor%20Coded%20with%20Python%20TK/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.11">
+    
+    
+      
+        <title>Graduation Thesis: ROS-based UAV Leveling System (excerpt) - HanCV</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.85bb2934.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.a6bdf11c.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="brown" data-md-color-accent="deep-orange">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#graduation-thesis-ros-based-uav-leveling-system-excerpt" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="HanCV" class="md-header__button md-logo" aria-label="HanCV" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HanCV
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Graduation Thesis: ROS-based UAV Leveling System (excerpt)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+      <div class="md-header__option">
+        <div class="md-select">
+          
+          <button class="md-header__button md-icon" aria-label="Select language">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7 1.62-4.33L19.12 17h-3.24Z"/></svg>
+          </button>
+          <div class="md-select__inner">
+            <ul class="md-select__list">
+              
+                <li class="md-select__item">
+                  <a href="./" hreflang="en" class="md-select__link">
+                    English
+                  </a>
+                </li>
+              
+                <li class="md-select__item">
+                  <a href="../../zh/Project/02Graduation%20Thesis/" hreflang="zh" class="md-select__link">
+                    简体中文
+                  </a>
+                </li>
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="HanCV" class="md-nav__button md-logo" aria-label="HanCV" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    HanCV
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        【Home】 Han Yan's CV
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          Project
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Project
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01NUEDC_project_Driving_Fatigue_Real-time_Detection_and_Pre-warning_System_%28Published%29/" class="md-nav__link">
+        NUEDC project: Driving Fatigue Real-time Detection and Pre-warning System (Published)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Graduation Thesis: ROS-based UAV Leveling System (excerpt)
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Graduation Thesis: ROS-based UAV Leveling System (excerpt)
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#video" class="md-nav__link">
+    Video
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#abstract" class="md-nav__link">
+    Abstract
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#semi-physical-test-experimental-box-attitude-detection-experiment" class="md-nav__link">
+    Semi-Physical Test - Experimental Box Attitude Detection Experiment
+  </a>
+  
+    <nav class="md-nav" aria-label="Semi-Physical Test - Experimental Box Attitude Detection Experiment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mahony-complementary-filtering-algorithm-and-process" class="md-nav__link">
+    Mahony complementary filtering algorithm and process
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fusion-results" class="md-nav__link">
+    Fusion results
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attitude-detection-and-simple-leveling-system-design-for-tracked-vehicle-follow-me-platform" class="md-nav__link">
+    Attitude detection and simple leveling system design for tracked vehicle follow-me platform
+  </a>
+  
+    <nav class="md-nav" aria-label="Attitude detection and simple leveling system design for tracked vehicle follow-me platform">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#attitude-detection-subsystem" class="md-nav__link">
+    Attitude detection subsystem
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ros-based-information-transfer-system" class="md-nav__link">
+    ROS-based information transfer system
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stm32-lower-computer-node-and-hardware-design" class="md-nav__link">
+    STM32 lower computer node and hardware design
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#leveling-control-subsystem" class="md-nav__link">
+    Leveling control subsystem
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#system-effect" class="md-nav__link">
+    System effect
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-and-outlook" class="md-nav__link">
+    Summary and outlook
+  </a>
+  
+    <nav class="md-nav" aria-label="Summary and outlook">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#main-work" class="md-nav__link">
+    Main work
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#future-and-outlook" class="md-nav__link">
+    Future and outlook
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03PLC%20Temp%20Monitor%20Coded%20with%20Python%20TK/" class="md-nav__link">
+        PLC Temp Monitor Coded with Python TK as Uplink
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#video" class="md-nav__link">
+    Video
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#abstract" class="md-nav__link">
+    Abstract
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#semi-physical-test-experimental-box-attitude-detection-experiment" class="md-nav__link">
+    Semi-Physical Test - Experimental Box Attitude Detection Experiment
+  </a>
+  
+    <nav class="md-nav" aria-label="Semi-Physical Test - Experimental Box Attitude Detection Experiment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mahony-complementary-filtering-algorithm-and-process" class="md-nav__link">
+    Mahony complementary filtering algorithm and process
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fusion-results" class="md-nav__link">
+    Fusion results
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attitude-detection-and-simple-leveling-system-design-for-tracked-vehicle-follow-me-platform" class="md-nav__link">
+    Attitude detection and simple leveling system design for tracked vehicle follow-me platform
+  </a>
+  
+    <nav class="md-nav" aria-label="Attitude detection and simple leveling system design for tracked vehicle follow-me platform">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#attitude-detection-subsystem" class="md-nav__link">
+    Attitude detection subsystem
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ros-based-information-transfer-system" class="md-nav__link">
+    ROS-based information transfer system
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stm32-lower-computer-node-and-hardware-design" class="md-nav__link">
+    STM32 lower computer node and hardware design
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#leveling-control-subsystem" class="md-nav__link">
+    Leveling control subsystem
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#system-effect" class="md-nav__link">
+    System effect
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-and-outlook" class="md-nav__link">
+    Summary and outlook
+  </a>
+  
+    <nav class="md-nav" aria-label="Summary and outlook">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#main-work" class="md-nav__link">
+    Main work
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#future-and-outlook" class="md-nav__link">
+    Future and outlook
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="graduation-thesis-ros-based-uav-leveling-system-excerpt">Graduation Thesis: ROS-based UAV Leveling System (excerpt)<a class="headerlink" href="#graduation-thesis-ros-based-uav-leveling-system-excerpt" title="Permanent link">&para;</a></h1>
+<h2 id="video">Video<a class="headerlink" href="#video" title="Permanent link">&para;</a></h2>
+<div style="position: relative; padding: 30% 45%;">
+
+<iframe style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;" src="https://player.bilibili.com/player.html?aid=953554143&bvid=BV1Ms4y1g7dZ&cid=1125967224&page=1&autoplay=0&danmuku=0" frameborder="no" scrolling="no">
+
+</iframe>
+
+</div>
+<p>【Project#2】leveling system system show Site：Bilibili</p>
+<h2 id="abstract">Abstract<a class="headerlink" href="#abstract" title="Permanent link">&para;</a></h2>
+<p>Firstly, a semi-physical simulation based on the experimental box is conducted, and after collecting IMU data, the Mahony complementary filtering algorithm based on gyroscope and geomagnetic sensor is used for attitude solution, and the PI regulator parameters in the complementary filtering algorithm are adjusted to achieve higher attitude solution accuracy. The real-time performance of the system is improved by adjusting parameters such as frequency, with a view to solving the problem of control lag or insufficient control refinement.</p>
+<p>Finally, ROS is used as an information communication bridge to obtain attitude information during the system design. And a simple PID control program was written using STM32 to write the sub-node that controls the motor to verify the practicality of the system attitude solution. Among them, the sub-node written by STM32 communicates with the upper computer computer through serial port, and Python programming is used in ROS, which has good portability and can be applied to the on-board computer.</p>
+<p><strong>Keyword</strong>: attitude detection, follow-me platform, IMU, ROS</p>
+<h2 id="semi-physical-test-experimental-box-attitude-detection-experiment">Semi-Physical Test - Experimental Box Attitude Detection Experiment<a class="headerlink" href="#semi-physical-test-experimental-box-attitude-detection-experiment" title="Permanent link">&para;</a></h2>
+<p>The experimental box of this experiment has the ability to solve the attitude in real time, reading the sensor parameters from IMU and sending them to MATLAB for solving. Attitude solving based on gyroscope only and attitude solving based on gyroscope and geomagnetic sensor meter are performed separately and compared with the pure inertial method based on gyroscope and accelerometer in the experimental box.</p>
+<h3 id="mahony-complementary-filtering-algorithm-and-process">Mahony complementary filtering algorithm and process<a class="headerlink" href="#mahony-complementary-filtering-algorithm-and-process" title="Permanent link">&para;</a></h3>
+<p>Complementary filtering requires the interference noise of the two signals to be at different frequencies. By setting the cutoff frequencies of the two filters, the fused signals are ensured to cover the demanded frequencies. In IMU attitude estimation, the complementary filter uses high-pass filtering for the gyroscope (low frequency noise) and low-frequency filtering for the accelerometer/magnetometer (high frequency noise). In complementary filtering, the cutoff frequencies of both filters are the same, and it is then necessary to trade-off them according to the value of the useful frequency. The following is the formula for Mahony's complementary filtering algorithm, and the attitude can be solved by iterating over the following equation.</p>
+<p><img alt="Untitled" src="../%E6%9C%AC%E7%A7%91%E8%AE%BA%E6%96%87%EF%BC%9A%E5%9F%BA%E4%BA%8EROS%E7%9A%84%E6%97%A0%E4%BA%BA%E6%9C%BA%E8%B0%83%E5%B9%B3%E7%B3%BB%E7%BB%9F%EF%BC%88%E8%8A%82%E9%80%89%EF%BC%89%20adb834963fb14b4f9b0d34075949c992/Untitled.png" /></p>
+<p><img alt="Untitled" src="../%E6%9C%AC%E7%A7%91%E8%AE%BA%E6%96%87%EF%BC%9A%E5%9F%BA%E4%BA%8EROS%E7%9A%84%E6%97%A0%E4%BA%BA%E6%9C%BA%E8%B0%83%E5%B9%B3%E7%B3%BB%E7%BB%9F%EF%BC%88%E8%8A%82%E9%80%89%EF%BC%89%20adb834963fb14b4f9b0d34075949c992/Untitled%201.png" /></p>
+<p><img alt="Untitled" src="../%E6%9C%AC%E7%A7%91%E8%AE%BA%E6%96%87%EF%BC%9A%E5%9F%BA%E4%BA%8EROS%E7%9A%84%E6%97%A0%E4%BA%BA%E6%9C%BA%E8%B0%83%E5%B9%B3%E7%B3%BB%E7%BB%9F%EF%BC%88%E8%8A%82%E9%80%89%EF%BC%89%20adb834963fb14b4f9b0d34075949c992/Untitled%202.png" /></p>
+<p>represents the quaternion representation of the system attitude estimate; is the new interest generated by the PI regulator; and represents the error relationship between the measured inertia vectors and the predicted ones. The last term can be interpreted as the result of the fork product of vectors that coincide with each other is zero, while the deviations that do not coincide can be represented by this fork product.</p>
+<p>The Mahony complementary filtering algorithm focuses on the use of the classical PI compensator to calculate the compensation value, a controller in a PID control system with a similar mathematical form and a similar function for error transfer. The proportional term is used to control the "confidence" of the sensor, and the integral term is used to eliminate static errors.</p>
+<p><img alt="Untitled" src="../%E6%9C%AC%E7%A7%91%E8%AE%BA%E6%96%87%EF%BC%9A%E5%9F%BA%E4%BA%8EROS%E7%9A%84%E6%97%A0%E4%BA%BA%E6%9C%BA%E8%B0%83%E5%B9%B3%E7%B3%BB%E7%BB%9F%EF%BC%88%E8%8A%82%E9%80%89%EF%BC%89%20adb834963fb14b4f9b0d34075949c992/Untitled%203.png" /></p>
+<p>Figure Flow chart of Mahony complementary filtering algorithm</p>
+<h3 id="fusion-results">Fusion results<a class="headerlink" href="#fusion-results" title="Permanent link">&para;</a></h3>
+<p>Since the baseline data is obtained from the IMU (gyroscope and accelerometer) fusion, it has good dynamic characteristics and accuracy in a short integration time (within 1 minute), which can be used as a reference data to compare the effect of this experiment. The Mahony complementary filter is used in this experiment, and similar to the Kalman filter, the Mahony filter is also divided into prediction-correction. There are two parameters, whose parameter values will affect the filtering effect. is used to control the crossover frequency between accelerometer and gyroscope and is used to correct the gyroscope error. The following is the effect when taking different values, it can be seen that when taking 0.1, a better effect can be achieved.</p>
+<p><img alt="Untitled" src="../%E6%9C%AC%E7%A7%91%E8%AE%BA%E6%96%87%EF%BC%9A%E5%9F%BA%E4%BA%8EROS%E7%9A%84%E6%97%A0%E4%BA%BA%E6%9C%BA%E8%B0%83%E5%B9%B3%E7%B3%BB%E7%BB%9F%EF%BC%88%E8%8A%82%E9%80%89%EF%BC%89%20adb834963fb14b4f9b0d34075949c992/Untitled%204.png" /></p>
+<p>Fig. Kalman filter effect of gyroscope and electromagnetic sensor AHRS attitude system</p>
+<h2 id="attitude-detection-and-simple-leveling-system-design-for-tracked-vehicle-follow-me-platform">Attitude detection and simple leveling system design for tracked vehicle follow-me platform<a class="headerlink" href="#attitude-detection-and-simple-leveling-system-design-for-tracked-vehicle-follow-me-platform" title="Permanent link">&para;</a></h2>
+<p>The above experiments basically prove the feasibility of attitude solution, and this section carries out the system design. The system mainly consists of attitude detection subsystem, information transfer subsystem and leveling control subsystem. The attitude detection subsystem uses handsfree hfi_a9 IMU for attitude measurement, which is an IMU sensor with nine-axis sensors, i.e., three-axis gyroscope, three-axis accelerometer and three-axis magnetometer, and can directly output attitude information. The information transfer subsystem is based on ROS and communicates with the motor lower unit using C language, programmed in STM32 platform, for feedback and control. Finally the leveling control subsystem is called to perform attitude control using a PID control algorithm.</p>
+<h3 id="attitude-detection-subsystem">Attitude detection subsystem<a class="headerlink" href="#attitude-detection-subsystem" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Basic operation</li>
+</ul>
+<p>Use hfi_a9 IMU to detect vehicle attitude, use IMU in ROS environment. preparation work, download the driver software zip package. Ubuntu20.04, installed ROS-Noetic version, corresponding python version is python3, download the python3 driver software zip package. Install the ros_imu dependency package. Open a terminal and type in the terminal. Create a workspace, create the corresponding directory and extract the previously downloaded software driver tarball to the src directory after unzipping it. Compile and set environment variables. Check if the device can be detected, connect the IMU USB, check if the computer can recognize ttyUSB0, and after detecting ttyUSB0, assign permissions to ttyUSB0.</p>
+<p>Connect the IMU to the computer via USB connection cable and run the ROS driver visualization program.</p>
+<p><img alt="Untitled" src="../%E6%9C%AC%E7%A7%91%E8%AE%BA%E6%96%87%EF%BC%9A%E5%9F%BA%E4%BA%8EROS%E7%9A%84%E6%97%A0%E4%BA%BA%E6%9C%BA%E8%B0%83%E5%B9%B3%E7%B3%BB%E7%BB%9F%EF%BC%88%E8%8A%82%E9%80%89%EF%BC%89%20adb834963fb14b4f9b0d34075949c992/Untitled%205.png" /></p>
+<p>Figure 5.1 Visualization procedure</p>
+<p>Run the script to get the IMU Euler angle format data: Roll (roll), Pitch (pitch), Yaw (yaw). At this time, turn the IMU, you will see the change of the model on the rviz, and realize the real-time detection of the vehicle attitude.</p>
+<p><img alt="Untitled" src="../%E6%9C%AC%E7%A7%91%E8%AE%BA%E6%96%87%EF%BC%9A%E5%9F%BA%E4%BA%8EROS%E7%9A%84%E6%97%A0%E4%BA%BA%E6%9C%BA%E8%B0%83%E5%B9%B3%E7%B3%BB%E7%BB%9F%EF%BC%88%E8%8A%82%E9%80%89%EF%BC%89%20adb834963fb14b4f9b0d34075949c992/Untitled%206.png" /></p>
+<p>Figure 5.2 Obtaining Euler angle data</p>
+<ul>
+<li>Installation and commissioning</li>
+</ul>
+<p>In order to determine the car body attitude without affecting the leveling of the landing platform surface and to prevent accidental touching during landing, the sensor is placed on the top of the cover for monitoring the car body attitude. It should be noted here that the monitoring object is the vehicle body attitude, not the leveling platform attitude, so it will not be affected by the bad stability of the control system causing the attitude detection effect, and it is easy to observe the effect of the attitude detection system.</p>
+<p><img alt="Untitled" src="../%E6%9C%AC%E7%A7%91%E8%AE%BA%E6%96%87%EF%BC%9A%E5%9F%BA%E4%BA%8EROS%E7%9A%84%E6%97%A0%E4%BA%BA%E6%9C%BA%E8%B0%83%E5%B9%B3%E7%B3%BB%E7%BB%9F%EF%BC%88%E8%8A%82%E9%80%89%EF%BC%89%20adb834963fb14b4f9b0d34075949c992/Untitled%207.png" /></p>
+<p>Figure 5.3 Schematic diagram of IMU sensor placement (bottom left)</p>
+<p>The figure shows the main body of the whole attitude leveling system under debugging, the cell phone on the platform is used to monitor whether the attitude change is smooth, the motor is controlled by STM32, and the information is fed back to the master node of the computer upper computer through the serial communication port, the master node calculates and passes the motor speed amount signal to the STM32 node, the process is all done through ROS, which is easy to reuse.</p>
+<h3 id="ros-based-information-transfer-system">ROS-based information transfer system<a class="headerlink" href="#ros-based-information-transfer-system" title="Permanent link">&para;</a></h3>
+<p>ROS, the full name of the robot operating system, is currently being updated and iterated, and is widely used in research and industry. Its convenient communication features are very characteristic and are important for the implementation of this project to enhance its modularity and portability.</p>
+<ul>
+<li>Master node and communication flow</li>
+</ul>
+<p>rqt is a visualization tool written in qt for the ROS platform. Using rqt_graph the current node operation and subscription release can be plotted with a general graph of node communication as follows:</p>
+<p><img alt="Untitled" src="../%E6%9C%AC%E7%A7%91%E8%AE%BA%E6%96%87%EF%BC%9A%E5%9F%BA%E4%BA%8EROS%E7%9A%84%E6%97%A0%E4%BA%BA%E6%9C%BA%E8%B0%83%E5%B9%B3%E7%B3%BB%E7%BB%9F%EF%BC%88%E8%8A%82%E9%80%89%EF%BC%89%20adb834963fb14b4f9b0d34075949c992/Untitled%208.png" /></p>
+<p>Figure 5.4 ROS system communication node diagram</p>
+<p>In the master node, the program for PID control and receiving IMU sensor attitude data and encoder feedback position data is running. The master node controls the PWM duty cycle of the motor connected to the stm32 by issuing a topic named /pwm_duty/node1 for the purpose of controlling the motion and speed.</p>
+<p>In the program, the position where the three pushers should be in order to keep the horizontal balance is inverted by the acquired information of the crawler's posture. At the same time, the PID system, after adjusting the PID parameters, takes the position of the pusher as the target quantity, outputs the difference between the target quantity and the actual quantity, and uses the PID to adjust the difference, so as to achieve the effect of controlling the balance.</p>
+<p><img alt="Untitled" src="../%E6%9C%AC%E7%A7%91%E8%AE%BA%E6%96%87%EF%BC%9A%E5%9F%BA%E4%BA%8EROS%E7%9A%84%E6%97%A0%E4%BA%BA%E6%9C%BA%E8%B0%83%E5%B9%B3%E7%B3%BB%E7%BB%9F%EF%BC%88%E8%8A%82%E9%80%89%EF%BC%89%20adb834963fb14b4f9b0d34075949c992/Untitled%209.png" /></p>
+<p>Figure 5.5 Flowchart of the master node program</p>
+<p>As the above figure shows the structure of the ROS master node operation, the flow of information exchange is completed through subscription and publication. The callback function is called after each received information, which plays the role of timely feedback data, timely calculation output and timely response.</p>
+<h3 id="stm32-lower-computer-node-and-hardware-design">STM32 lower computer node and hardware design<a class="headerlink" href="#stm32-lower-computer-node-and-hardware-design" title="Permanent link">&para;</a></h3>
+<p>The circuit part, with the help of the encoder mode of the STM32 timer, enables easy measurement of a wide range of encoder signals. The A and B phases of the spoken encoder are connected to the ports of the timer (only TIMx_CH1 and TIMx_CH2 of the STM32 support encoder mode), and thereafter the timer can be called for the purpose of speed measurement. The following figure shows the hardware circuit diagram of an STM32 motor node.</p>
+<p><img alt="Untitled" src="../%E6%9C%AC%E7%A7%91%E8%AE%BA%E6%96%87%EF%BC%9A%E5%9F%BA%E4%BA%8EROS%E7%9A%84%E6%97%A0%E4%BA%BA%E6%9C%BA%E8%B0%83%E5%B9%B3%E7%B3%BB%E7%BB%9F%EF%BC%88%E8%8A%82%E9%80%89%EF%BC%89%20adb834963fb14b4f9b0d34075949c992/Untitled%2010.png" /></p>
+<p>Figure 5.6 Communication hardware and circuit driver structure</p>
+<p>The STM32 interacts with the outside world with the following components: PWM duty cycle signals sent to the motor and encoder signals received, and a serial port for communication with the PC host computer. The PWM duty cycle signal is generated using the PB5 pin to control the speed of the motor lift, and PB15 and PB14 are used to control the forward and reverse rotation of the motor.</p>
+<p>The program flow diagram of the STM32 lower computer node is as follows:</p>
+<p><img alt="Untitled" src="../%E6%9C%AC%E7%A7%91%E8%AE%BA%E6%96%87%EF%BC%9A%E5%9F%BA%E4%BA%8EROS%E7%9A%84%E6%97%A0%E4%BA%BA%E6%9C%BA%E8%B0%83%E5%B9%B3%E7%B3%BB%E7%BB%9F%EF%BC%88%E8%8A%82%E9%80%89%EF%BC%89%20adb834963fb14b4f9b0d34075949c992/Untitled%2011.png" /></p>
+<p>Figure 5.7 STM32 sub-node program flowchart</p>
+<p>The flow of use is as follows:Remove all serial connections from the computer, open the terminal and run roscore afterwards. Connect the Handsfree A9 IMU and run the Attitude Solver sub-node. Open another new terminal and run the master node. Connect the STM32's serial port to the computer, open another new terminal, and run the sub-node. The PID program and parameters are located in the Python program of the master node, which can be modified and restarted in time to see the results.</p>
+<h3 id="leveling-control-subsystem">Leveling control subsystem<a class="headerlink" href="#leveling-control-subsystem" title="Permanent link">&para;</a></h3>
+<p>As generally shown in the figure above, the callback function in the master node runs the PID control system by calculating its deviation and then using the method of PID regulator to control and adjust the position as the control target of the follower platform pushrod position.</p>
+<p>For the combined dimensions of the platform, the height of the equilateral triangle was measured, where the frame was defined as one frame turned by the encoder grating. And by the geometric relationship can be will angle and offset relationship expressed by the following formula, and will be applied to calculate the target position.</p>
+<p><img alt="Untitled" src="../%E6%9C%AC%E7%A7%91%E8%AE%BA%E6%96%87%EF%BC%9A%E5%9F%BA%E4%BA%8EROS%E7%9A%84%E6%97%A0%E4%BA%BA%E6%9C%BA%E8%B0%83%E5%B9%B3%E7%B3%BB%E7%BB%9F%EF%BC%88%E8%8A%82%E9%80%89%EF%BC%89%20adb834963fb14b4f9b0d34075949c992/Untitled%2012.png" /></p>
+<p>And when the angle θ is positive, the actuator moves outward, and when θ is negative, it moves backward. With this basic mathematical model, it can be used as the basic control target quantity for control.</p>
+<p>The PID model of the simple control system can achieve a more robust and responsive control effect when the three parameters of the final manually rectified position-based PID are as follows. At the same time, a limit operation is used in the program to avoid abnormal values of the PID output and to improve the robustness of the model.</p>
+<p><img alt="Untitled" src="../%E6%9C%AC%E7%A7%91%E8%AE%BA%E6%96%87%EF%BC%9A%E5%9F%BA%E4%BA%8EROS%E7%9A%84%E6%97%A0%E4%BA%BA%E6%9C%BA%E8%B0%83%E5%B9%B3%E7%B3%BB%E7%BB%9F%EF%BC%88%E8%8A%82%E9%80%89%EF%BC%89%20adb834963fb14b4f9b0d34075949c992/Untitled%2013.png" /></p>
+<p>Note that since you want to subscribe to and use data from both nodes at the same time, you need to synchronize their messages using message_filter and use the same callback function to control the computation. Details can be found in the appendix code.</p>
+<h3 id="system-effect">System effect<a class="headerlink" href="#system-effect" title="Permanent link">&para;</a></h3>
+<p>After total assembly, the circuit is shown below, with three nodes, each containing three parts: TTL to USB serial port, PWM driver and STM32 main control, which are connected using Dupont wire during the experiment. In addition the sensor is directly connected to the computer.</p>
+<p><img alt="Untitled" src="../%E6%9C%AC%E7%A7%91%E8%AE%BA%E6%96%87%EF%BC%9A%E5%9F%BA%E4%BA%8EROS%E7%9A%84%E6%97%A0%E4%BA%BA%E6%9C%BA%E8%B0%83%E5%B9%B3%E7%B3%BB%E7%BB%9F%EF%BC%88%E8%8A%82%E9%80%89%EF%BC%89%20adb834963fb14b4f9b0d34075949c992/Untitled%2014.png" /></p>
+<p>Figure 5.8 Circuit actual installation diagram</p>
+<p>When balancing, the attitude is shown in the figure below, and the pitch axis balance experiment is carried out, except for the positive axis, the other two pushers are at rest to test the pitch axis effect alone. At this time, the stationary axis is placed in 0 position, and the motion axis has only positive motion degrees of freedom, on which the level is turned on to monitor for visualization test.</p>
+<p><img alt="Untitled" src="../%E6%9C%AC%E7%A7%91%E8%AE%BA%E6%96%87%EF%BC%9A%E5%9F%BA%E4%BA%8EROS%E7%9A%84%E6%97%A0%E4%BA%BA%E6%9C%BA%E8%B0%83%E5%B9%B3%E7%B3%BB%E7%BB%9F%EF%BC%88%E8%8A%82%E9%80%89%EF%BC%89%20adb834963fb14b4f9b0d34075949c992/Untitled%2015.png" /></p>
+<p>Figure 5.9 The follower platform in a balanced attitude</p>
+<p>A series of angle tests were then performed, starting with a small angle test, using the other end of the cover as a pivot point and moving up and down manually to simulate the uncertain vibration undulations of a realistic tracked vehicle in motion.</p>
+<p>The moving platform for monitoring showed almost zero angular fluctuation, which is the best result when the slow motion of small angles is accompanied by low latency and good follow-through, which is the type of vibration often found in crawler travel.</p>
+<p>For faster movements at smaller angles, the delay starts to show up, the overshoot of the following platform starts to increase, and the visualized moving platform shows angle fluctuations in the range of 1°.</p>
+<p><img alt="Untitled" src="../%E6%9C%AC%E7%A7%91%E8%AE%BA%E6%96%87%EF%BC%9A%E5%9F%BA%E4%BA%8EROS%E7%9A%84%E6%97%A0%E4%BA%BA%E6%9C%BA%E8%B0%83%E5%B9%B3%E7%B3%BB%E7%BB%9F%EF%BC%88%E8%8A%82%E9%80%89%EF%BC%89%20adb834963fb14b4f9b0d34075949c992/Untitled%2016.png" /></p>
+<p>Figure 5.10 Following motion platform at small angles</p>
+<p>Further motion tests at larger angles still have a very smooth follow-through with slow motion at large angles, and the visualized moving platform shows angle fluctuations within 1°. Still has a good performance.</p>
+<p>When performing fast motion at large angles, the leveling following delay rises, the amount of overshoot increases, the oscillation convergence time increases to about 2 seconds, and its overall leveling performance is greatly reduced.</p>
+<p><img alt="Untitled" src="../%E6%9C%AC%E7%A7%91%E8%AE%BA%E6%96%87%EF%BC%9A%E5%9F%BA%E4%BA%8EROS%E7%9A%84%E6%97%A0%E4%BA%BA%E6%9C%BA%E8%B0%83%E5%B9%B3%E7%B3%BB%E7%BB%9F%EF%BC%88%E8%8A%82%E9%80%89%EF%BC%89%20adb834963fb14b4f9b0d34075949c992/Untitled%2017.png" /></p>
+<p>Fig. 5.11 The follower platform at large angles</p>
+<p>Finally, it is concluded that the system responds quickly and with small overshoot at small angles, but the response time will increase and the overshoot will be higher at large angles. And the response real time and overshoot amount will be increased in the case of fast motion speed. However, it is enough to prove that the attitude detection part can sense the attitude correctly and has some practicality.</p>
+<h2 id="summary-and-outlook">Summary and outlook<a class="headerlink" href="#summary-and-outlook" title="Permanent link">&para;</a></h2>
+<h3 id="main-work">Main work<a class="headerlink" href="#main-work" title="Permanent link">&para;</a></h3>
+<p>In order to realize the design of attitude detection and simple leveling system for tracked vehicle follow-on platform, we mainly conducted experiments and designs from offline data simulation, semi-physical testing of hardware sensors, design and verification of tracked vehicle follow-on platform system, and completed the basic process from theoretical foundation to system design. And tested the program of STM32 to write the lower computer and communicate with ROS to verify its feasibility. The basic leveling geometry model was established, pushed to its leveling formula, and applied to the PID control system. Finally, by the effect, a better stability is obtained, and it is concluded that the leveling mathematical model is established correctly and the attitude detection system has some practicality.</p>
+<h3 id="future-and-outlook">Future and outlook<a class="headerlink" href="#future-and-outlook" title="Permanent link">&para;</a></h3>
+<p>Improvements can be made in the following aspects:</p>
+<ul>
+<li>① specific attitude detection algorithms can be designed for the vibration characteristics of the crawler platform in order to achieve better model stability, and the long-time operating characteristics should also be improved accordingly. For example, the analysis of the vibration sources of the tracked vehicle and the response design algorithm can be carried out.</li>
+<li>② adjusting the attitude solution scheme, from the analysis in this design, the pure gyroscope attitude solution method does not have good resistance to time drift, although this experiment conducted Mahony complementary filtering algorithm for attitude solution, and proved its practicality to some extent, but still has certain limitations. If the cooperative filtering algorithm using GPS or BeiDou GPS is added under outdoor conditions, the time drift of the attitude solving model will be further reduced.</li>
+<li>③ the improvement of PID control algorithm. From the current situation, the manually adjusted position-based PID controller, in the case of conservative parameters will still overshoot the phenomenon, which requires more nonlinear methods to join the controller to get a more excellent and highly robust control effect.</li>
+<li>④ increase the plotting of PID control curves. The program code that feeds back the current position from the STM32 node and records the deviation from the target value should be added. This can enhance the grasp of the experimental results and more intuitive observation of the control effect.</li>
+<li>⑤ instead of using encoder feedback to control the pusher motor, a vector control (FOC) method should be used for finer control of the AC motor. FOC is a control scheme for AC motors, which can achieve finer control of the AC motor phase compared to the traditional three-phase control, and can improve the zero drift of the system.</li>
+<li>⑥ MEMS inertial sensors are installed on both the following platform and the carrier platform to further limit the following error of the following platform and improve the system performance by processing redundant sensing information through the feedback of both attitudes. Although this design uses only a single sensor mounted on the bottom cover and solidly connected to the tracked vehicle to reflect the position of the actuator through its attitude, this can reduce unnecessary vibration and improve the stability of the output of the attitude detection system, but this brings the problem that the action on the follower platform is not fed back to the control system, which will lead to a larger response time. By redundant sensor information, the optimal solution is sought to achieve better control.</li>
+</ul>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.fac441b0.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+        <script src="../../javascripts/MathJax.js"></script>
+      
+    
+  </body>
+</html>
