@@ -1,7 +1,13 @@
 (注意在本机中需要进入Anaconda Prompt)：
 【命令】conda activate mkdocs_hancv_pyenv
 
-每次更新文档后上传，进入docs目录，然后执行一行命令即可：
+每次更新文档后上传，进入docs目录，然后执行：更新git库再运行mkdoks
+git add -a
+
+git commit -m "修改home"
+
+git push origin main
+
 【命令】mkdocs gh-deploy --clean
 
 参考：https://zhuanlan.zhihu.com/p/383582472
@@ -10,8 +16,4 @@ NUEDC project: Driving Fatigue Real-time Detection and Pre-warning System (Publi
 
 修改完后：
 
-git add -a
 
-git commit -m "修改home"
-
-git push origin main
