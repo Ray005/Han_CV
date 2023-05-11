@@ -4,6 +4,19 @@
 
 ![1683641183980.png](./img/1683641183980.png)
 
+## 视频
+
+<div style="position: relative; padding: 30% 45%;">
+
+<iframe style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;" src="https://player.bilibili.com/player.html?aid=741017287&bvid=BV1nk4y177Xz&cid=1126341818&page=1&autoplay=0&danmuku=0" frameborder="no" scrolling="no">
+
+</iframe>
+
+</div> 【Project#3】疲劳驾驶监控系统 Site：Bilibili
+
+
+## 报告正文
+
 2020年全国大学生电子设计竞赛信息科技前沿专题邀请赛（瑞萨杯）作品设计报告
 
 我国公安部交通管理局发布的全国道路交通安全情况报告指出，在发生的特大交通事故中，以驾驶员疲劳驾驶最突出。驾驶疲劳会使驾驶员的反应时间显著增长、操作能力下降、判断失误增多。因此，建立合适的驾驶疲劳评价体系与装置具有一定现实意义。

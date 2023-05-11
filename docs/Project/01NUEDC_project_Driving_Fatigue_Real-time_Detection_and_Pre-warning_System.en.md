@@ -4,6 +4,18 @@ Published in: 2020 NUEDC Information Technology Frontier Invitational Competitio
 
 ![1683641183980.png](./img/1683641183980.png)
 
+## Video
+
+<div style="position: relative; padding: 30% 45%;">
+
+<iframe style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;" src="https://player.bilibili.com/player.html?aid=741017287&bvid=BV1nk4y177Xz&cid=1126341818&page=1&autoplay=0&danmuku=0" frameborder="no" scrolling="no">
+
+</iframe>
+
+</div> 【Project#3】疲劳驾驶监控系统 Site：Bilibili
+
+## Report
+
 2020 National College Student Electronic Design Contest Information Technology Frontier Topic Invitational Tournament (Risa Cup) works design report
 
 Driving Fatigue Real-time Detection and Pre-warning System
