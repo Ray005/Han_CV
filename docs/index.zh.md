@@ -12,7 +12,7 @@
 
 ## 项目经历
 
-【电赛项目】[ 全国大学生电子设计竞赛项目：疲劳驾驶检测项目（已出版）](Project/01NUEDC_project_Driving_Fatigue_Real-time_Detection_and_Pre-warning_System_(Published).zh.md)
+【电赛项目】[ 全国大学生电子设计竞赛项目：疲劳驾驶检测项目（已出版）](Project/01NUEDC_project_Driving_Fatigue_Real-time_Detection_and_Pre-warning_System.zh.md)
 
 【本科论文】[ 本科论文：基于ROS的无人机调平系统（节选）](Project/02Graduation%20Thesis.zh.md)
 
